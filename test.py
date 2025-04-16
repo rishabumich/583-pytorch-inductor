@@ -5,13 +5,17 @@ from torch._decomp import decomposition_table  # use _decomp as of current PyTor
 # Define a module with a split operation
 class SplitMod(torch.nn.Module):
     def forward(self, x):
-        return torch.split(x, [1, 1], dim=0)
+        ###################################################
+        grad_output = torch.randn(2, 2, device='cpu')
+        output = torch.randn(2, 2, device='cpu')
+        return torch.ops.aten.sigmoid_backward(grad_output, output)
+        ###################################################
 
 # Instantiate the model
 mod = SplitMod()
 
 # Input tensor (ensure it's on the correct device)
-x = torch.tensor([[1, 2], [3, 4]])
+x = None
 args = (x,)
 
 # Export graph before decomposition

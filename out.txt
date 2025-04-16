@@ -1,0 +1,24 @@
+Before decomposition:
+
+
+
+def forward(self, x):
+    x, = fx_pytree.tree_flatten_spec(([x], {}), self._in_spec)
+    randn = torch.ops.aten.randn.default([2, 2], device = device(type='cpu'), pin_memory = False)
+    randn_1 = torch.ops.aten.randn.default([2, 2], device = device(type='cpu'), pin_memory = False)
+    sigmoid_backward = torch.ops.aten.sigmoid_backward.default(randn, randn_1);  randn = randn_1 = None
+    return pytree.tree_unflatten((sigmoid_backward,), self._out_spec)
+    
+After decomposition:
+
+
+
+def forward(self, x):
+    x, = fx_pytree.tree_flatten_spec(([x], {}), self._in_spec)
+    normal = torch.ops.prims.normal.default([2, 2], mean = 0.0, std = 1.0, dtype = torch.float32, device = device(type='cpu'), requires_grad = False)
+    normal_1 = torch.ops.prims.normal.default([2, 2], mean = 0.0, std = 1.0, dtype = torch.float32, device = device(type='cpu'), requires_grad = False)
+    sub = torch.ops.prims.sub.default(1.0, normal_1)
+    mul = torch.ops.prims.mul.default(normal_1, sub);  normal_1 = sub = None
+    mul_1 = torch.ops.prims.mul.default(normal, mul);  normal = mul = None
+    return pytree.tree_unflatten((mul_1,), self._out_spec)
+    
