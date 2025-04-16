@@ -1,0 +1,108 @@
+__all_and_float_types() -> tuple[tuple[type, ...], tuple[type, ...]]
+__getattr__(name)
+_as_tensor_fullprec(t)
+_assert(condition, message)
+_check(cond, message=None)
+_check_index(cond, message=None)
+_check_is_size(i, message=None, *, max=None)
+_check_not_implemented(cond, message=None)
+_check_tensor_all(cond, message=None)
+_check_tensor_all_with(error_type, cond, message=None)
+_check_type(cond, message=None)
+_check_value(cond, message=None)
+_check_with(error_type, cond: Union[bool, torch.SymBool], message: Callable[[], str])
+_constrain_as_size(symbol, min: Optional[int] = None, max: Optional[int] = None)
+_disable_dynamo(fn: Optional[Callable[~_P, ~_T]] = None, recursive: bool = True) -> Union[Callable[~_P, ~_T], Callable[[Callable[~_P, ~_T]], Callable[~_P, ~_T]]]
+_get_cuda_dep_paths(path: str, lib_folder: str, lib_name: str) -> list[str]
+_get_origin(tp)
+_import_device_backends()
+_import_dotted_name(name)
+_is_device_backend_autoload_enabled() -> bool
+_load_global_deps() -> None
+_overload(func)
+_preload_cuda_deps(lib_folder: str, lib_name: str) -> None
+_register_device_module(device_type, module)
+_running_with_deploy() -> bool
+_sym_acos(a)
+_sym_asin(a)
+_sym_atan(a)
+_sym_cos(a)
+_sym_cosh(a)
+_sym_log2(a)
+_sym_sin(a)
+_sym_sinh(a)
+_sym_sqrt(a)
+_sym_tan(a)
+_sym_tanh(a)
+_sync(t)
+_warn_typed_storage_removal(stacklevel=2)
+align_tensors(*tensors)
+are_deterministic_algorithms_enabled() -> bool
+atleast_1d(*tensors)
+atleast_2d(*tensors)
+atleast_3d(*tensors)
+block_diag(*tensors)
+broadcast_shapes(*shapes)
+broadcast_tensors(*tensors)
+cartesian_prod(*tensors: torch.Tensor) -> torch.Tensor
+cdist(x1, x2, p=2.0, compute_mode='use_mm_for_euclid_dist_if_necessary')
+chain_matmul(*matrices, out=None)
+classproperty(func)
+compile(model: Optional[Callable] = None, *, fullgraph: bool = False, dynamic: Optional[bool] = None, backend: Union[str, Callable] = 'inductor', mode: Optional[str] = None, options: Optional[dict[str, Union[str, int, bool, Callable]]] = None, disable: bool = False) -> Union[Callable[[Callable[~_InputT, ~_RetT]], Callable[~_InputT, ~_RetT]], Callable[~_InputT, ~_RetT]]
+compiled_with_cxx11_abi() -> bool
+cond(pred: Union[bool, int, float, torch.Tensor], true_fn: Callable, false_fn: Callable, operands: Union[tuple, list] = ()) -> Any
+eig(self: torch.Tensor, eigenvectors: bool = False, *, e=None, v=None) -> tuple[torch.Tensor, torch.Tensor]
+einsum(*args: Any) -> torch.Tensor
+from_dlpack(ext_tensor: Any) -> 'torch.Tensor'
+get_default_device() -> 'torch.device'
+get_deterministic_debug_mode() -> int
+get_file_path(*path_components: str) -> str
+get_float32_matmul_precision() -> str
+get_rng_state() -> torch.Tensor
+initial_seed() -> int
+is_deterministic_algorithms_warn_only_enabled() -> bool
+is_storage(obj: Any, /) -> TypeIs[Union[ForwardRef('TypedStorage'), ForwardRef('UntypedStorage')]]
+is_tensor(obj: Any, /) -> TypeIs[ForwardRef('torch.Tensor')]
+is_warn_always_enabled() -> bool
+load(f: Union[str, os.PathLike[str], IO[bytes]], map_location: Union[Callable[[torch.types.Storage, str], torch.types.Storage], torch.device, str, dict[str, str], NoneType] = None, pickle_module: Any = None, *, weights_only: Optional[bool] = None, mmap: Optional[bool] = None, **pickle_load_args: Any) -> Any
+lobpcg(A: torch.Tensor, k: Optional[int] = None, B: Optional[torch.Tensor] = None, X: Optional[torch.Tensor] = None, n: Optional[int] = None, iK: Optional[torch.Tensor] = None, niter: Optional[int] = None, tol: Optional[float] = None, largest: Optional[bool] = None, method: Optional[str] = None, tracker: None = None, ortho_iparams: Optional[dict[str, int]] = None, ortho_fparams: Optional[dict[str, float]] = None, ortho_bparams: Optional[dict[str, bool]] = None) -> tuple[torch.Tensor, torch.Tensor]
+lstsq(input: torch.Tensor, A: torch.Tensor, *, out=None) -> tuple[torch.Tensor, torch.Tensor]
+lu(*args, **kwargs)
+manual_seed(seed) -> torch._C.Generator
+matrix_rank(input, tol=None, symmetric=False, *, out=None) -> torch.Tensor
+meshgrid(*tensors, indexing: Optional[str] = None) -> tuple[torch.Tensor, ...]
+norm(input, p: Union[float, str, NoneType] = 'fro', dim=None, keepdim=False, out=None, dtype=None)
+pca_lowrank(A: torch.Tensor, q: Optional[int] = None, center: bool = True, niter: int = 2) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]
+prepare_multiprocessing_environment(path: str) -> None
+save(obj: object, f: Union[str, os.PathLike[str], IO[bytes]], pickle_module: Any = <module 'pickle' from '/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pickle.py'>, pickle_protocol: int = 2, _use_new_zipfile_serialization: bool = True, _disable_byteorder_record: bool = False) -> None
+seed() -> int
+set_default_device(device: Union[ForwardRef('torch.device'), str, int, NoneType]) -> None
+set_default_dtype(d: 'torch.dtype', /) -> None
+set_default_tensor_type(t: Union[type['torch.Tensor'], str], /) -> None
+set_deterministic_debug_mode(debug_mode: Union[int, str]) -> None
+set_float32_matmul_precision(precision: str) -> None
+set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None, profile=None, sci_mode=None)
+set_rng_state(new_state: torch.Tensor) -> None
+set_warn_always(b: bool, /) -> None
+solve(input: torch.Tensor, A: torch.Tensor, *, out=None) -> tuple[torch.Tensor, torch.Tensor]
+split(tensor: torch.Tensor, split_size_or_sections: Union[int, list[int]], dim: int = 0) -> tuple[torch.Tensor, ...]
+stft(input: torch.Tensor, n_fft: int, hop_length: Optional[int] = None, win_length: Optional[int] = None, window: Optional[torch.Tensor] = None, center: bool = True, pad_mode: str = 'reflect', normalized: bool = False, onesided: Optional[bool] = None, return_complex: Optional[bool] = None, align_to_window: Optional[bool] = None) -> torch.Tensor
+svd_lowrank(A: torch.Tensor, q: Optional[int] = 6, niter: Optional[int] = 2, M: Optional[torch.Tensor] = None) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]
+sym_float(a)
+sym_fresh_size(expr)
+sym_int(a)
+sym_ite(b, t, f)
+sym_max(a, b)
+sym_min(a, b)
+sym_not(a)
+sym_sqrt(a)
+sym_sum(args)
+symeig(input, eigenvectors=False, upper=True, *, out=None) -> tuple[torch.Tensor, torch.Tensor]
+tensordot(a, b, dims=2, out: Optional[torch.Tensor] = None)
+typename(obj: Any, /) -> str
+unique(*args, **kwargs)
+unique_consecutive(*args, **kwargs)
+unravel_index(indices: torch.Tensor, shape: Union[int, collections.abc.Sequence[int], torch.Size]) -> tuple[torch.Tensor, ...]
+use_deterministic_algorithms(mode: bool, *, warn_only: bool = False) -> None
+vmap(func: Callable, in_dims: Union[int, tuple] = 0, out_dims: Union[int, tuple[int, ...]] = 0, randomness: str = 'error', *, chunk_size=None) -> Callable
+while_loop(cond_fn, body_fn, carried_inputs)
