@@ -1,0 +1,2 @@
+softplus_backward(out_grad,x,beta,threshold),Tensor,Tensor,float,float
+elu_backward(grad_output,alpha,scale,input_scale,is_result,self_or_result),Tensor,float,float,float,bool,Tensor
