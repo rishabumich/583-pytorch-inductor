@@ -1,0 +1,2 @@
+torch.ops.aten.abs(self)Tensor
+torch.ops.aten.abs.out(self,out)Tensor,Tensor(a!)
