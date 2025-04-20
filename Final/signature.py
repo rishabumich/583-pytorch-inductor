@@ -25,7 +25,7 @@ def parse_args(arg_str):
     for arg in parts:
         if arg == '*':
             continue
-        match = re.match(r"([\w\[\]?!]+(?:\([^\)]*\))?)\s+(\w+)", arg)
+        match = re.match(r"([^\s]+(?:\([^\)]*\))?(?:\[\])?)\s+(\w+)", arg)
         if match:
             typ, name = match.groups()
             names.append(name)
