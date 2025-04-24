@@ -1,2 +1,5 @@
-torch.ops.aten.abs(self)Tensor
-torch.ops.aten.abs.out(self,out)Tensor,Tensor(a!)
+torch.ops.aten.acos.int(a)|int
+torch.ops.aten.acos.float(a)|float
+torch.ops.aten.acos.complex(a)|complex
+torch.ops.aten.acosh(self)|Tensor
+torch.ops.aten.acosh.out(self,out)|Tensor,Tensor(a!)

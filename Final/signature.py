@@ -56,7 +56,7 @@ with open(output_path, "w", encoding="utf-8") as f:
                         joined_types = ",".join(arg_types)
                         prefix = "torch.ops.aten."
                         func_name_clean = func_name.replace("aten::", "")
-                        f.write(f"{prefix}{func_name_clean}({joined_names}){joined_types}\n")
+                        f.write(f"{prefix}{func_name_clean}({joined_names})|{joined_types}\n")
 
         except Exception:
             continue

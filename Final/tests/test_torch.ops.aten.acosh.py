@@ -4,23 +4,21 @@ from torch._decomp import decomposition_table  # use _decomp as of current PyTor
 import sys
 
 # Redirect all stdout to a file
-sys.stdout = open("output_softplus_backward.txt", "w")
+original_std_out = sys.stdout
+#sys.stdout = open("output_torch.ops.aten.acosh.txt", "w")
 
 # Define a module with the operator
-class SoftplusBackwardModule(torch.nn.Module):
-    def forward(self, out_grad, x, beta, threshold):
-        return torch.ops.aten.softplus_backward(out_grad, x, beta, threshold)
+class Torch_Ops_Aten_AcoshModule(torch.nn.Module):
+    def forward(self,x):
+        return x.acosh()
 
 # Instantiate the model
-mod = SoftplusBackwardModule()
+mod = Torch_Ops_Aten_AcoshModule()
 
 # Define inputs
-out_grad = torch.randn(3, requires_grad=True)
-x = torch.randn(3, requires_grad=True)
-beta = 1.0
-threshold = 1.0
+in1 = torch.randn(3,3)
 
-args = (out_grad, x, beta, threshold,)
+args = (in1,)
 
 # Export graph before decomposition
 ep = export_for_training(mod, args)
@@ -31,3 +29,5 @@ print(ep.module().code)
 ep = ep.run_decompositions(decomposition_table)
 print("After decomposition:")
 print(ep.module().code)
+
+sys.stdout = original_std_out
