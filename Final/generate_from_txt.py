@@ -94,9 +94,21 @@ print("Result:", result)
 '''
 
 def parse_signature_line(line):
-    fn_and_args, types_str = line.strip().split("|")
-    fn_name, args_str = fn_and_args.split("(")
-    arg_names = [arg.strip() for arg in args_str.rstrip(")").split(",") if arg.strip()]
+    line = line.strip()
+
+    idx = line.find(")")
+    if idx == -1:
+        raise ValueError(f"Invalid format, missing ')': {line}")
+
+    fn_and_args = line[:idx + 1]
+    types_str = line[idx + 1:]
+
+    # Safer split using partition
+    fn_name_part, _, args_str = fn_and_args.partition("(")
+    fn_name = fn_name_part.strip()
+
+    raw_args = args_str.rstrip(")")
+    arg_names = [arg.strip() for arg in raw_args.split(",") if arg.strip()]
     arg_types = [typ.strip() for typ in types_str.split(",")]
 
     onlySelf = (arg_names == ['self'])
@@ -104,7 +116,7 @@ def parse_signature_line(line):
         arg_names = []
         arg_types = []
 
-    return fn_name.strip(), arg_names, arg_types, arg_types[0] if len(arg_types) == 1 else "Tensor", onlySelf
+    return fn_name, arg_names, arg_types, arg_types[0] if len(arg_types) == 1 else "Tensor", onlySelf
 
 if __name__ == "__main__":
     with open("signatures.txt", "r") as f:
@@ -118,3 +130,7 @@ if __name__ == "__main__":
             with open(filename, "w") as out_file:
                 out_file.write(test_code)
             print(f"Generated: {filename}")
+
+
+
+
