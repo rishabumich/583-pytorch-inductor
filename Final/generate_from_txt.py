@@ -14,7 +14,8 @@ def generate_test(fn_name, arg_names, arg_types, return_type, onlySelf):
             adjusted_name = name
         adjusted_arg_names.append(adjusted_name)
 
-        if typ.startswith("Tensor"):
+        # Improved Tensor type detection
+        if "Tensor" in typ:
             if name == "out":
                 tensor_placeholders.append(f"{adjusted_name} = torch.empty(3)")
                 call_args_list.append(f"{adjusted_name}={adjusted_name}")
@@ -34,7 +35,8 @@ def generate_test(fn_name, arg_names, arg_types, return_type, onlySelf):
             tensor_placeholders.append(f"{adjusted_name} = complex(1.0, 2.0)")
             call_args_list.append(f"{adjusted_name}")
         else:
-            tensor_placeholders.append(f"{adjusted_name} = None  # Unknown type {typ}")
+            # Safe fallback for unknown types
+            tensor_placeholders.append(f"{adjusted_name} = torch.tensor(0)  # Fallback for unknown type {typ}")
             call_args_list.append(f"{adjusted_name}")
 
     call_args = ", ".join(call_args_list)
@@ -123,14 +125,13 @@ if __name__ == "__main__":
         for line in f:
             if not line.strip():
                 continue
-            fn_name, arg_names, arg_types, return_type, onlySelf = parse_signature_line(line)
-            test_code = generate_test(fn_name, arg_names, arg_types, return_type, onlySelf)
-            os.makedirs("tests", exist_ok=True)
-            filename = f"tests/test_{fn_name.replace('.', '_')}.py"
-            with open(filename, "w") as out_file:
-                out_file.write(test_code)
-            print(f"Generated: {filename}")
-
-
-
-
+            try:
+                fn_name, arg_names, arg_types, return_type, onlySelf = parse_signature_line(line)
+                test_code = generate_test(fn_name, arg_names, arg_types, return_type, onlySelf)
+                os.makedirs("tests", exist_ok=True)
+                filename = f"tests/test_{fn_name.replace('.', '_')}.py"
+                with open(filename, "w") as out_file:
+                    out_file.write(test_code)
+                print(f"Generated: {filename}")
+            except Exception as e:
+                print(f"Skipping line due to error: {line.strip()}\nReason: {e}")
