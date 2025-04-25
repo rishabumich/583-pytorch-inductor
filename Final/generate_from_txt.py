@@ -82,14 +82,11 @@ op = {fn_name}
 
 {inputs_code}
 
-print("Before decomposition:")
+print("Scalar-returning op:")
 if op in decomposition_table:
     print(f"{{op}} is decomposed.")
 else:
     print(f"{{op}} is NOT decomposed.")
-
-print("After decomposition:")
-print("Not applicable for scalar-returning ops.")
 
 result = op({call_args})
 print("Result:", result)
