@@ -18,7 +18,7 @@ def check_for_decomp():
             #Scan through lines
             for line in lines:
                 if(scalarFunction == 0):
-                    if "Scalar-returning" in lines:
+                    if "Scalar-returning" in line:
                         scalarFunction = 1
                     elif "Before" in line:
                         foundBefore = 1
@@ -34,11 +34,11 @@ def check_for_decomp():
                     elif foundAfterDef:
                         afterLines.append(line.strip())
                 else: #Sclar function
-                    if "is NOT decomposed" in lines:
-                        print("Decomp failed")
+                    if "is NOT decomposed" in line:
+                        print("------Scalar decomp failed")
                         return 0
-                    elif "is decomposed" in lines:
-                        print("Decomp worked")
+                    elif "is decomposed" in line:
+                        print("------Scalar decomp worked")
                         return 1
                 #print("FB: "+str(foundBefore)+"FA: "+str(foundAfter)+"FBD: "+str(foundBeforeDef)+"FAD: "+str(foundAfterDef))
             #Check if function are the same or different
@@ -48,10 +48,10 @@ def check_for_decomp():
                     if (beforeLines[i] != afterLines[i]):
                         differingLines += 1
                 if(differingLines>0):
-                    print("Decomp worked: expanded from "+str(len(beforeLines))+" to "+str(len(afterLines))+" lines with at least "+str(differingLines)+" changed.")
+                    print("------Decomp worked: expanded from "+str(len(beforeLines))+" to "+str(len(afterLines))+" lines with at least "+str(differingLines)+" changed.")
                     return 1
                 else:
-                    print("Decomp failed. All lines the same.")
+                    print("------Decomp failed. All lines the same.")
                     return 0
 
 pathToTests = "tests"
@@ -63,7 +63,7 @@ errorCount = 0
 ranCount = 0
 decompWorkedCount = 0
 
-for i in range(5):  # Or len(files) for all tests
+for i in range(len(files)):  # Or len(files) for all tests
     file_path = os.path.join(pathToTests, files[i])
     print(f"Running {files[i]}")
 
@@ -79,12 +79,14 @@ for i in range(5):  # Or len(files) for all tests
             f.write(result.stderr)
 
         if result.returncode != 0:
-            print(f"{files[i]} caused an error.")
+            print(f"---{files[i]} caused an error.")
             errorCount += 1 
         else:
-            print(f"{files[i]} ran without exception.")
+            print(f"---{files[i]} ran without exception.")
             ranCount += 1
             decompWorkedCount += check_for_decomp()
+            # with open("temp.txt", "w") as a:
+            #     pass #Clear file
     except Exception as e:
         print(f"Failed to run {files[i]} due to: {e}")
 
