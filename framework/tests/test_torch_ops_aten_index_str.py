@@ -1,0 +1,24 @@
+import torch
+from torch.export import export_for_training
+from torch._decomp import decomposition_table
+
+class Torch_Ops_Aten_Index_StrModule(torch.nn.Module):
+    def forward(self, x, substr, start, end):
+        return torch.ops.aten.index.str(x, substr, start, end)
+
+mod = Torch_Ops_Aten_Index_StrModule()
+
+x = torch.tensor(0)  # Fallback for unknown type |str
+substr = torch.tensor(0)  # Fallback for unknown type str
+start = 3
+end = 3
+
+args = (x, substr, start, end,)
+
+ep = export_for_training(mod, args)
+print("Before decomposition:")
+print(ep.module().code)
+
+ep = ep.run_decompositions(decomposition_table)
+print("After decomposition:")
+print(ep.module().code)

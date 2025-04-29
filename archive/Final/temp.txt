@@ -1,0 +1,18 @@
+Before decomposition:
+
+
+
+def forward(self, x):
+    x, = fx_pytree.tree_flatten_spec(([x], {}), self._in_spec)
+    acosh = torch.ops.aten.acosh.default(x);  x = None
+    return pytree.tree_unflatten((acosh,), self._out_spec)
+    
+After decomposition:
+
+
+
+def forward(self, x):
+    x, = fx_pytree.tree_flatten_spec(([x], {}), self._in_spec)
+    acosh = torch.ops.prims.acosh.default(x);  x = None
+    return pytree.tree_unflatten((acosh,), self._out_spec)
+    

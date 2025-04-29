@@ -1,0 +1,23 @@
+import torch
+from torch.export import export_for_training
+from torch._decomp import decomposition_table
+
+class Torch_Ops_Aten_Rot90Module(torch.nn.Module):
+    def forward(self, x, k, dims):
+        return torch.ops.aten.rot90(x, k, dims)
+
+mod = Torch_Ops_Aten_Rot90Module()
+
+x = torch.randn(3)
+k = 3
+dims = torch.tensor(0)  # Fallback for unknown type int[]
+
+args = (x, k, dims,)
+
+ep = export_for_training(mod, args)
+print("Before decomposition:")
+print(ep.module().code)
+
+ep = ep.run_decompositions(decomposition_table)
+print("After decomposition:")
+print(ep.module().code)

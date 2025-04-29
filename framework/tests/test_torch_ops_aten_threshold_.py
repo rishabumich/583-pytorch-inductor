@@ -1,0 +1,23 @@
+import torch
+from torch.export import export_for_training
+from torch._decomp import decomposition_table
+
+class Torch_Ops_Aten_ThresholdModule(torch.nn.Module):
+    def forward(self, x, threshold, value):
+        return torch.ops.aten.threshold_(x, threshold, value)
+
+mod = Torch_Ops_Aten_ThresholdModule()
+
+x = torch.randn(3)
+threshold = torch.tensor(0)  # Fallback for unknown type Scalar
+value = torch.tensor(0)  # Fallback for unknown type Scalar
+
+args = (x, threshold, value,)
+
+ep = export_for_training(mod, args)
+print("Before decomposition:")
+print(ep.module().code)
+
+ep = ep.run_decompositions(decomposition_table)
+print("After decomposition:")
+print(ep.module().code)
