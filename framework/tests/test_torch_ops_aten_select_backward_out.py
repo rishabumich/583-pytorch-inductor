@@ -9,9 +9,9 @@ class Torch_Ops_Aten_SelectBackward_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_SelectBackward_OutModule()
 
 grad_output = torch.randn(3)
-input_sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+input_sizes = torch.sym_int(3)
 dim = 3
-index = torch.tensor(0)  # Fallback for unknown type SymInt
+index = None  # Fallback for unknown type SymInt
 out = torch.empty(3)
 
 args = (grad_output, input_sizes, dim, index, out,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Fill_ScalarModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Fill_ScalarModule()
 
 x = torch.randn(3)
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+value = 1
 
 args = (x, value,)
 

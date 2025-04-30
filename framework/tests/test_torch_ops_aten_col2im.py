@@ -9,11 +9,11 @@ class Torch_Ops_Aten_Col2ImModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Col2ImModule()
 
 x = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[2]
-kernel_size = torch.tensor(0)  # Fallback for unknown type int[2]
-dilation = torch.tensor(0)  # Fallback for unknown type int[2]
-padding = torch.tensor(0)  # Fallback for unknown type int[2]
-stride = torch.tensor(0)  # Fallback for unknown type int[2]
+output_size = torch.sym_int(3)
+kernel_size = 3
+dilation = 3
+padding = 3
+stride = 3
 
 args = (x, output_size, kernel_size, dilation, padding, stride,)
 

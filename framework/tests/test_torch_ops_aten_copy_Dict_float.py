@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Copy_DictFloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Copy_DictFloatModule()
 
-t = torch.tensor(0)  # Fallback for unknown type |Dict(float
+t = None  # Fallback for unknown type |Dict(float
 
 args = (t,)
 

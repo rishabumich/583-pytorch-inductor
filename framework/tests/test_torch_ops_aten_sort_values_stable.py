@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Sort_ValuesStableModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Sort_ValuesStableModule()
 
 x = torch.randn(3)
-stable = torch.tensor(0)  # Fallback for unknown type bool?
+stable = True
 dim = 3
 descending = True
 values = torch.randn(3)

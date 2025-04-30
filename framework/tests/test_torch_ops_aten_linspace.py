@@ -8,13 +8,13 @@ class Torch_Ops_Aten_LinspaceModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_LinspaceModule()
 
-start = torch.tensor(0)  # Fallback for unknown type |Scalar
-end = torch.tensor(0)  # Fallback for unknown type Scalar
+start = None  # Fallback for unknown type |Scalar
+end = 1
 steps = 3
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (start, end, steps, dtype, layout, device, pin_memory,)
 

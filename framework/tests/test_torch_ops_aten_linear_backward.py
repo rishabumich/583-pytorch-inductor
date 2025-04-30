@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_LinearBackwardModule()
 x = torch.randn(3)
 grad_output = torch.randn(3)
 weight = torch.randn(3)
-output_mask = torch.tensor(0)  # Fallback for unknown type bool[3]
+output_mask = True
 
 args = (x, grad_output, weight, output_mask,)
 

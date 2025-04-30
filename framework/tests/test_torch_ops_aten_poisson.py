@@ -9,7 +9,7 @@ class Torch_Ops_Aten_PoissonModule(torch.nn.Module):
 mod = Torch_Ops_Aten_PoissonModule()
 
 x = torch.randn(3)
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 
 args = (x, generator,)
 

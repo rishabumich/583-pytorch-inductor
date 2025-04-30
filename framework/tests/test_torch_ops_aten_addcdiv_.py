@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_AddcdivModule()
 x = torch.randn(3)
 tensor1 = torch.randn(3)
 tensor2 = torch.randn(3)
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+value = 1
 
 args = (x, tensor1, tensor2, value,)
 

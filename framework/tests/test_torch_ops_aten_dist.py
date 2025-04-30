@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_DistModule()
 
 x = torch.randn(3)
 other = torch.randn(3)
-p = torch.tensor(0)  # Fallback for unknown type Scalar
+p = 1
 
 args = (x, other, p,)
 

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_SpecialLaguerrePolynomialL_NScalarOutModule(torch.nn.Module
 mod = Torch_Ops_Aten_SpecialLaguerrePolynomialL_NScalarOutModule()
 
 x = torch.randn(3)
-n = torch.tensor(0)  # Fallback for unknown type Scalar
+n = 1
 out = torch.empty(3)
 
 args = (x, n, out,)

@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Diagonal_DimnameModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Diagonal_DimnameModule()
 
 x = torch.randn(3)
-outdim = torch.tensor(0)  # Fallback for unknown type str
-dim1 = torch.tensor(0)  # Fallback for unknown type str
-dim2 = torch.tensor(0)  # Fallback for unknown type str
+outdim = None  # Fallback for unknown type str
+dim1 = None  # Fallback for unknown type str
+dim2 = None  # Fallback for unknown type str
 offset = 3
 
 args = (x, outdim, dim1, dim2, offset,)

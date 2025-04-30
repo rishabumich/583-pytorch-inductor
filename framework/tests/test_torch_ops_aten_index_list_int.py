@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Index_ListIntModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Index_ListIntModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |int[]
+x = 3
 el = 3
 
 args = (x, el,)

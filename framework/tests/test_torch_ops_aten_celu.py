@@ -9,7 +9,7 @@ class Torch_Ops_Aten_CeluModule(torch.nn.Module):
 mod = Torch_Ops_Aten_CeluModule()
 
 x = torch.randn(3)
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+alpha = 1
 
 args = (x, alpha,)
 

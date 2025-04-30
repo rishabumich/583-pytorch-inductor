@@ -9,13 +9,13 @@ class Torch_Ops_Aten_SegmentReduce_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_SegmentReduce_OutModule()
 
 data = torch.randn(3)
-reduce = torch.tensor(0)  # Fallback for unknown type str
+reduce = None  # Fallback for unknown type str
 lengths = torch.randn(3)
 indices = torch.randn(3)
 offsets = torch.randn(3)
 axis = 3
 unsafe = True
-initial = torch.tensor(0)  # Fallback for unknown type Scalar?
+initial = 1
 out = torch.empty(3)
 
 args = (data, reduce, lengths, indices, offsets, axis, unsafe, initial, out,)

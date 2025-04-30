@@ -9,9 +9,9 @@ class Torch_Ops_Aten_EluModule(torch.nn.Module):
 mod = Torch_Ops_Aten_EluModule()
 
 x = torch.randn(3)
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
-scale = torch.tensor(0)  # Fallback for unknown type Scalar
-input_scale = torch.tensor(0)  # Fallback for unknown type Scalar
+alpha = 1
+scale = 1
+input_scale = 1
 
 args = (x, alpha, scale, input_scale,)
 

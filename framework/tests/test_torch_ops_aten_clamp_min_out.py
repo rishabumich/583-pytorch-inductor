@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ClampMin_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ClampMin_OutModule()
 
 x = torch.randn(3)
-min = torch.tensor(0)  # Fallback for unknown type Scalar
+min = 1
 out = torch.empty(3)
 
 args = (x, min, out,)

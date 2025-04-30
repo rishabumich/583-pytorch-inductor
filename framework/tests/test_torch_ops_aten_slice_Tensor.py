@@ -10,9 +10,9 @@ mod = Torch_Ops_Aten_Slice_TensorModule()
 
 x = torch.randn(3)
 dim = 3
-start = torch.tensor(0)  # Fallback for unknown type SymInt?
-end = torch.tensor(0)  # Fallback for unknown type SymInt?
-step = torch.tensor(0)  # Fallback for unknown type SymInt
+start = torch.sym_int(3)
+end = torch.sym_int(3)
+step = None  # Fallback for unknown type SymInt
 
 args = (x, dim, start, end, step,)
 

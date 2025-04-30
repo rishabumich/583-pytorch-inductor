@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_ThresholdBackward_GradInputModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-threshold = torch.tensor(0)  # Fallback for unknown type Scalar
+threshold = 1
 grad_input = torch.randn(3)
 
 args = (grad_output, x, threshold, grad_input,)

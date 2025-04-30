@@ -8,12 +8,12 @@ class Torch_Ops_Aten_Rand_NamesModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Rand_NamesModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-names = torch.tensor(0)  # Fallback for unknown type str[]?
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+size = torch.sym_int(3)
+names = None  # Fallback for unknown type str[]?
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (size, names, dtype, layout, device, pin_memory,)
 

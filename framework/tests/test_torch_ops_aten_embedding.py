@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_EmbeddingModule()
 
 weight = torch.randn(3)
 indices = torch.randn(3)
-padding_idx = torch.tensor(0)  # Fallback for unknown type SymInt
+padding_idx = None  # Fallback for unknown type SymInt
 scale_grad_by_freq = True
 sparse = True
 

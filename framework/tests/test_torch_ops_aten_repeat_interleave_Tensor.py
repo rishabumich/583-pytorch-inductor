@@ -9,7 +9,7 @@ class Torch_Ops_Aten_RepeatInterleave_TensorModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RepeatInterleave_TensorModule()
 
 repeats = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt?
+output_size = torch.sym_int(3)
 
 args = (repeats, output_size,)
 

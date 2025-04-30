@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Rot90_OutModule()
 
 x = torch.randn(3)
 k = 3
-dims = torch.tensor(0)  # Fallback for unknown type int[]
+dims = 3
 out = torch.empty(3)
 
 args = (x, k, dims, out,)

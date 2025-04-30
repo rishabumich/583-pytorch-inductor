@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Index_ListBoolModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Index_ListBoolModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |bool[]
+x = True
 el = True
 
 args = (x, el,)

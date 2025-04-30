@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Flip_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Flip_OutModule()
 
 x = torch.randn(3)
-dims = torch.tensor(0)  # Fallback for unknown type int[]
+dims = 3
 out = torch.empty(3)
 
 args = (x, dims, out,)

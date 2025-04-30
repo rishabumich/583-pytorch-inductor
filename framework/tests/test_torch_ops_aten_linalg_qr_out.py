@@ -9,7 +9,7 @@ class Torch_Ops_Aten_LinalgQr_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_LinalgQr_OutModule()
 
 A = torch.randn(3)
-mode = torch.tensor(0)  # Fallback for unknown type str
+mode = None  # Fallback for unknown type str
 Q = torch.randn(3)
 R = torch.randn(3)
 

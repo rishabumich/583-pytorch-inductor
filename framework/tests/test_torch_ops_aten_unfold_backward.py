@@ -9,7 +9,7 @@ class Torch_Ops_Aten_UnfoldBackwardModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UnfoldBackwardModule()
 
 grad_in = torch.randn(3)
-input_sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+input_sizes = torch.sym_int(3)
 dim = 3
 size = 3
 step = 3

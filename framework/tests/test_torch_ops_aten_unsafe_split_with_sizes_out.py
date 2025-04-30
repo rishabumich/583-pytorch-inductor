@@ -9,7 +9,7 @@ class Torch_Ops_Aten_UnsafeSplitWithSizes_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UnsafeSplitWithSizes_OutModule()
 
 x = torch.randn(3)
-split_sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+split_sizes = torch.sym_int(3)
 dim = 3
 out = torch.empty(3)
 

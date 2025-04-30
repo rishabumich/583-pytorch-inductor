@@ -17,7 +17,7 @@ save_mean = torch.randn(3)
 save_var = torch.randn(3)
 update = True
 eps = 1.0
-output_mask = torch.tensor(0)  # Fallback for unknown type bool[3]
+output_mask = True
 reserve = torch.randn(3)
 
 args = (grad_out, input, weight, running_mean, running_var, save_mean, save_var, update, eps, output_mask, reserve,)

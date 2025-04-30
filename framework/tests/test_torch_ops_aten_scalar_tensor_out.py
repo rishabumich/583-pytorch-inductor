@@ -8,7 +8,7 @@ class Torch_Ops_Aten_ScalarTensor_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_ScalarTensor_OutModule()
 
-s = torch.tensor(0)  # Fallback for unknown type |Scalar
+s = None  # Fallback for unknown type |Scalar
 out = torch.empty(3)
 
 args = (s, out,)

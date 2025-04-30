@@ -9,12 +9,12 @@ class Torch_Ops_Aten_FullLikeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_FullLikeModule()
 
 x = torch.randn(3)
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+fill_value = 1
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, fill_value, dtype, layout, device, pin_memory, memory_format,)
 

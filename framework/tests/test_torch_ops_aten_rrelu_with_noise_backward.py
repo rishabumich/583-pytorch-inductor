@@ -11,8 +11,8 @@ mod = Torch_Ops_Aten_RreluWithNoiseBackwardModule()
 grad_output = torch.randn(3)
 x = torch.randn(3)
 noise = torch.randn(3)
-lower = torch.tensor(0)  # Fallback for unknown type Scalar
-upper = torch.tensor(0)  # Fallback for unknown type Scalar
+lower = 1
+upper = 1
 training = True
 self_is_result = True
 

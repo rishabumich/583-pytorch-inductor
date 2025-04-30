@@ -9,7 +9,7 @@ class Torch_Ops_Aten_RepeatModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RepeatModule()
 
 x = torch.randn(3)
-repeats = torch.tensor(0)  # Fallback for unknown type SymInt[]
+repeats = torch.sym_int(3)
 
 args = (x, repeats,)
 

@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Sort_FloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Sort_FloatModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |float[](a!)
+x = 1.0
 reverse = True
 
 args = (x, reverse,)

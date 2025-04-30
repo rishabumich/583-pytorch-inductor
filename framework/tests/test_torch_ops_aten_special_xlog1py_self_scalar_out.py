@@ -8,7 +8,7 @@ class Torch_Ops_Aten_SpecialXlog1Py_SelfScalarOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_SpecialXlog1Py_SelfScalarOutModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |Scalar
+x = None  # Fallback for unknown type |Scalar
 other = torch.randn(3)
 out = torch.empty(3)
 

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_NewEmpty_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_NewEmpty_OutModule()
 
 x = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
+size = torch.sym_int(3)
 out = torch.empty(3)
 
 args = (x, size, out,)

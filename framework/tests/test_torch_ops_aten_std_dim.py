@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Std_DimModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Std_DimModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type int[1]?
+dim = 3
 unbiased = True
 keepdim = True
 

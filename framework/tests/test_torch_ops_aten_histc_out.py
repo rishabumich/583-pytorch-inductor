@@ -10,8 +10,8 @@ mod = Torch_Ops_Aten_Histc_OutModule()
 
 x = torch.randn(3)
 bins = 3
-min = torch.tensor(0)  # Fallback for unknown type Scalar
-max = torch.tensor(0)  # Fallback for unknown type Scalar
+min = 1
+max = 1
 out = torch.empty(3)
 
 args = (x, bins, min, max, out,)

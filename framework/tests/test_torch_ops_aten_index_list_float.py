@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Index_ListFloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Index_ListFloatModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |float[]
+x = 1.0
 el = 1.0
 
 args = (x, el,)

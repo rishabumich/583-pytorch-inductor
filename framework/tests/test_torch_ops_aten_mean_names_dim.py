@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Mean_NamesDimModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Mean_NamesDimModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str[1]
+dim = None  # Fallback for unknown type str[1]
 keepdim = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 
 args = (x, dim, keepdim, dtype,)
 

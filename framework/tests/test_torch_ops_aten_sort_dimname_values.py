@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Sort_DimnameValuesModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Sort_DimnameValuesModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 descending = True
 values = torch.randn(3)
 indices = torch.randn(3)

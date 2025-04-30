@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Index_ListStrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Index_ListStrModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |str[]
-el = torch.tensor(0)  # Fallback for unknown type str
+x = None  # Fallback for unknown type |str[]
+el = None  # Fallback for unknown type str
 
 args = (x, el,)
 

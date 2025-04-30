@@ -14,7 +14,7 @@ grid = torch.randn(3)
 interpolation_mode = 3
 padding_mode = 3
 align_corners = True
-output_mask = torch.tensor(0)  # Fallback for unknown type bool[2]
+output_mask = True
 
 args = (grad_output, input, grid, interpolation_mode, padding_mode, align_corners, output_mask,)
 

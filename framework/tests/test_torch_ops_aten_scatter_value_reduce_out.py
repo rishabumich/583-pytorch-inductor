@@ -11,8 +11,8 @@ mod = Torch_Ops_Aten_Scatter_ValueReduceOutModule()
 x = torch.randn(3)
 dim = 3
 index = torch.randn(3)
-value = torch.tensor(0)  # Fallback for unknown type Scalar
-reduce = torch.tensor(0)  # Fallback for unknown type str
+value = 1
+reduce = None  # Fallback for unknown type str
 out = torch.empty(3)
 
 args = (x, dim, index, value, reduce, out,)

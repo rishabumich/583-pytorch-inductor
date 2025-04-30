@@ -3,7 +3,7 @@ from torch._decomp import decomposition_table
 
 op = torch.ops.aten.cosh.float
 
-a = torch.tensor(0)  # Fallback for unknown type |float
+a = None  # Fallback for unknown type |float
 
 print("Scalar-returning op:")
 if op in decomposition_table:

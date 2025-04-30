@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Norm_ScalaroptDtypeOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Norm_ScalaroptDtypeOutModule()
 
 x = torch.randn(3)
-p = torch.tensor(0)  # Fallback for unknown type Scalar?
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType
+p = 1
+dtype = None  # Fallback for unknown type ScalarType
 out = torch.empty(3)
 
 args = (x, p, dtype, out,)

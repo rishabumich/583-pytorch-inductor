@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ProdModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ProdModule()
 
 x = torch.randn(3)
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 
 args = (x, dtype,)
 

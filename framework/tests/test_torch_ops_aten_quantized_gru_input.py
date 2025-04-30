@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_QuantizedGru_InputModule()
 
 input = torch.randn(3)
 hx = torch.randn(3)
-params = torch.tensor(0)  # Fallback for unknown type __torch__.torch.classes.rnn.CellParamsBase[]
+params = None  # Fallback for unknown type __torch__.torch.classes.rnn.CellParamsBase[]
 has_biases = True
 num_layers = 3
 dropout = 1.0

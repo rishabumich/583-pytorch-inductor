@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Select_TModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Select_TModule()
 
-list = torch.tensor(0)  # Fallback for unknown type |t[](a)
+list = None  # Fallback for unknown type |t[](a)
 idx = 3
 
 args = (list, idx,)

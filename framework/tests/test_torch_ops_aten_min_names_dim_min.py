@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Min_NamesDimMinModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Min_NamesDimMinModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 keepdim = True
 min = torch.randn(3)
 min_indices = torch.randn(3)

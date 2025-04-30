@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Add_TModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Add_TModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |t[]
-b = torch.tensor(0)  # Fallback for unknown type t[]
+a = None  # Fallback for unknown type |t[]
+b = None  # Fallback for unknown type t[]
 
 args = (a, b,)
 

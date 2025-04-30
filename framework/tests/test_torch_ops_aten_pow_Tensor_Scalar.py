@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Pow_TensorScalarModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Pow_TensorScalarModule()
 
 x = torch.randn(3)
-exponent = torch.tensor(0)  # Fallback for unknown type Scalar
+exponent = 1
 
 args = (x, exponent,)
 

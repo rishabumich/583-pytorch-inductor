@@ -8,8 +8,8 @@ class Torch_Ops_Aten_EmptyPermuted_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_EmptyPermuted_OutModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-physical_layout = torch.tensor(0)  # Fallback for unknown type int[]
+size = torch.sym_int(3)
+physical_layout = 3
 out = torch.empty(3)
 
 args = (size, physical_layout, out,)

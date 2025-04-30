@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Prod_DimnameOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Prod_DimnameOutModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 keepdim = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 out = torch.empty(3)
 
 args = (x, dim, keepdim, dtype, out,)

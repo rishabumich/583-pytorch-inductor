@@ -3,7 +3,7 @@ from torch._decomp import decomposition_table
 
 op = torch.ops.aten.acos.complex
 
-a = torch.tensor(0)  # Fallback for unknown type |complex
+a = None  # Fallback for unknown type |complex
 
 print("Scalar-returning op:")
 if op in decomposition_table:

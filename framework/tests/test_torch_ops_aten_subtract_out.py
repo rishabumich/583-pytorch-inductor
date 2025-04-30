@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Subtract_OutModule()
 
 x = torch.randn(3)
 other = torch.randn(3)
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+alpha = 1
 out = torch.empty(3)
 
 args = (x, other, alpha, out,)

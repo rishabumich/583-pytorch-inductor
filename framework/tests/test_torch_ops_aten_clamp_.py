@@ -9,8 +9,8 @@ class Torch_Ops_Aten_ClampModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ClampModule()
 
 x = torch.randn(3)
-min = torch.tensor(0)  # Fallback for unknown type Scalar?
-max = torch.tensor(0)  # Fallback for unknown type Scalar?
+min = 1
+max = 1
 
 args = (x, min, max,)
 

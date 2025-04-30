@@ -9,7 +9,7 @@ class Torch_Ops_Aten_BitwiseXor_ScalarOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_BitwiseXor_ScalarOutModule()
 
 x = torch.randn(3)
-other = torch.tensor(0)  # Fallback for unknown type Scalar
+other = 1
 out = torch.empty(3)
 
 args = (x, other, out,)

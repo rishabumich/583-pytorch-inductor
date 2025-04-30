@@ -9,7 +9,7 @@ class Torch_Ops_Aten_LinalgQrModule(torch.nn.Module):
 mod = Torch_Ops_Aten_LinalgQrModule()
 
 A = torch.randn(3)
-mode = torch.tensor(0)  # Fallback for unknown type str
+mode = None  # Fallback for unknown type str
 
 args = (A, mode,)
 

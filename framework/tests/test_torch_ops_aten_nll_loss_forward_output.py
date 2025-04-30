@@ -12,7 +12,7 @@ x = torch.randn(3)
 target = torch.randn(3)
 weight = torch.randn(3)
 reduction = 3
-ignore_index = torch.tensor(0)  # Fallback for unknown type SymInt
+ignore_index = None  # Fallback for unknown type SymInt
 output = torch.randn(3)
 total_weight = torch.randn(3)
 

@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Eq_StrListModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eq_StrListModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |str[]
-b = torch.tensor(0)  # Fallback for unknown type str[]
+a = None  # Fallback for unknown type |str[]
+b = None  # Fallback for unknown type str[]
 
 args = (a, b,)
 

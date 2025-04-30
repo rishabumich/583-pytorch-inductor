@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Stride_DimnameModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Stride_DimnameModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 
 args = (x, dim,)
 

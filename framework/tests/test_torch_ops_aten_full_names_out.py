@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Full_NamesOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Full_NamesOutModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |int[]
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
-names = torch.tensor(0)  # Fallback for unknown type str[]?
+size = 3
+fill_value = 1
+names = None  # Fallback for unknown type str[]?
 out = torch.empty(3)
 
 args = (size, fill_value, names, out,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Hardshrink_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Hardshrink_OutModule()
 
 x = torch.randn(3)
-lambd = torch.tensor(0)  # Fallback for unknown type Scalar
+lambd = 1
 out = torch.empty(3)
 
 args = (x, lambd, out,)

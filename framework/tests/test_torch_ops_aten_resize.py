@@ -9,8 +9,8 @@ class Torch_Ops_Aten_ResizeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ResizeModule()
 
 x = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+size = torch.sym_int(3)
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, size, memory_format,)
 

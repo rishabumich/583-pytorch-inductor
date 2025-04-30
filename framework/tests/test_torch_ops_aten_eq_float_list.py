@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Eq_FloatListModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eq_FloatListModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |float[]
-b = torch.tensor(0)  # Fallback for unknown type float[]
+a = 1.0
+b = 1.0
 
 args = (a, b,)
 

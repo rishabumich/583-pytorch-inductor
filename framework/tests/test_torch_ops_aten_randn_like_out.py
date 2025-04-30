@@ -9,7 +9,7 @@ class Torch_Ops_Aten_RandnLike_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RandnLike_OutModule()
 
 x = torch.randn(3)
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+memory_format = None  # Fallback for unknown type MemoryFormat?
 out = torch.empty(3)
 
 args = (x, memory_format, out,)

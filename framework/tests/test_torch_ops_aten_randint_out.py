@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Randint_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randint_OutModule()
 
-high = torch.tensor(0)  # Fallback for unknown type |SymInt
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
+high = None  # Fallback for unknown type |SymInt
+size = torch.sym_int(3)
 out = torch.empty(3)
 
 args = (high, size, out,)

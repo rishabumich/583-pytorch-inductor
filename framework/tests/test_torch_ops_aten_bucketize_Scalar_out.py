@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Bucketize_ScalarOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Bucketize_ScalarOutModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |Scalar
+x = None  # Fallback for unknown type |Scalar
 boundaries = torch.randn(3)
 out_int32 = True
 right = True

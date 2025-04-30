@@ -10,14 +10,14 @@ mod = Torch_Ops_Aten_QuantizedLstm_InputModule()
 
 input = torch.randn(3)
 hx = torch.randn(3)
-params = torch.tensor(0)  # Fallback for unknown type __torch__.torch.classes.rnn.CellParamsBase[]
+params = None  # Fallback for unknown type __torch__.torch.classes.rnn.CellParamsBase[]
 has_biases = True
 num_layers = 3
 dropout = 1.0
 train = True
 bidirectional = True
 batch_first = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 use_dynamic = True
 
 args = (input, hx, params, has_biases, num_layers, dropout, train, bidirectional, batch_first, dtype, use_dynamic,)

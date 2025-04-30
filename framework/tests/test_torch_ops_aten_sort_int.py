@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Sort_IntModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Sort_IntModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |int[](a!)
+x = 3
 reverse = True
 
 args = (x, reverse,)

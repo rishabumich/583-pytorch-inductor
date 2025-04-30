@@ -9,9 +9,9 @@ class Torch_Ops_Aten_RandintLike_LowDtypeOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RandintLike_LowDtypeOutModule()
 
 x = torch.randn(3)
-low = torch.tensor(0)  # Fallback for unknown type SymInt
-high = torch.tensor(0)  # Fallback for unknown type SymInt
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+low = None  # Fallback for unknown type SymInt
+high = None  # Fallback for unknown type SymInt
+memory_format = None  # Fallback for unknown type MemoryFormat?
 out = torch.empty(3)
 
 args = (x, low, high, memory_format, out,)

@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_ReflectionPad1DBackward_GradInputModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-padding = torch.tensor(0)  # Fallback for unknown type SymInt[2]
+padding = torch.sym_int(3)
 grad_input = torch.randn(3)
 
 args = (grad_output, x, padding, grad_input,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_TopkModule(torch.nn.Module):
 mod = Torch_Ops_Aten_TopkModule()
 
 x = torch.randn(3)
-k = torch.tensor(0)  # Fallback for unknown type SymInt
+k = None  # Fallback for unknown type SymInt
 dim = 3
 largest = True
 sorted = True

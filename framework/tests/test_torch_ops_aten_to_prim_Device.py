@@ -9,8 +9,8 @@ class Torch_Ops_Aten_To_PrimDeviceModule(torch.nn.Module):
 mod = Torch_Ops_Aten_To_PrimDeviceModule()
 
 x = torch.randn(3)
-device = torch.tensor(0)  # Fallback for unknown type Device?
-dtype = torch.tensor(0)  # Fallback for unknown type int?
+device = None  # Fallback for unknown type Device?
+dtype = 3
 non_blocking = True
 copy = True
 

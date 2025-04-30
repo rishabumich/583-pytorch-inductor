@@ -15,28 +15,34 @@ def generate_test(fn_name, arg_names, arg_types, return_type, onlySelf):
         adjusted_arg_names.append(adjusted_name)
 
         # Improved Tensor type detection
-        if "Tensor" in typ:
+        if "Tensor" in typ or "Tensor[" in typ or "Tensor?" in typ:
             if name == "out":
                 tensor_placeholders.append(f"{adjusted_name} = torch.empty(3)")
                 call_args_list.append(f"{adjusted_name}={adjusted_name}")
             else:
                 tensor_placeholders.append(f"{adjusted_name} = torch.randn(3)")
                 call_args_list.append(f"{adjusted_name}")
-        elif typ == "float":
+        elif typ == "float" or "float[" in typ or "float?" in typ:
             tensor_placeholders.append(f"{adjusted_name} = 1.0")
             call_args_list.append(f"{adjusted_name}")
-        elif typ == "int":
+        elif typ == "int" or "int[" in typ or "int?" in typ:
             tensor_placeholders.append(f"{adjusted_name} = 3")
             call_args_list.append(f"{adjusted_name}")
-        elif typ == "bool":
+        elif typ == "bool" or "bool[" in typ or "bool?" in typ:
             tensor_placeholders.append(f"{adjusted_name} = True")
             call_args_list.append(f"{adjusted_name}")
-        elif typ == "complex":
+        elif typ == "complex" or "complex[" in typ or "complex?" in typ:
             tensor_placeholders.append(f"{adjusted_name} = complex(1.0, 2.0)")
             call_args_list.append(f"{adjusted_name}")
+        elif typ == "Scalar" or "Scalar[" in typ or "Scalar?" in typ:
+            tensor_placeholders.append(f"{adjusted_name} = 1")
+            call_args_list.append(f"{adjusted_name}")
+        elif typ == "SymInt?" or "SymInt[" in typ or "SymInt?" in typ:
+            tensor_placeholders.append(f"{adjusted_name} = torch.sym_int(3)")
+            call_args_list.append(f"{adjusted_name}")
         else:
-            # Safe fallback for unknown types
-            tensor_placeholders.append(f"{adjusted_name} = torch.tensor(0)  # Fallback for unknown type {typ}")
+            # Safe fallback for unknown types such as ScalarType?
+            tensor_placeholders.append(f"{adjusted_name} = None  # Fallback for unknown type {typ}")
             call_args_list.append(f"{adjusted_name}")
 
     call_args = ", ".join(call_args_list)

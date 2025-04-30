@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Meshgrid_IndexingModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Meshgrid_IndexingModule()
 
 tensors = torch.randn(3)
-indexing = torch.tensor(0)  # Fallback for unknown type str
+indexing = None  # Fallback for unknown type str
 
 args = (tensors, indexing,)
 

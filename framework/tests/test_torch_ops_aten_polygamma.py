@@ -8,7 +8,7 @@ class Torch_Ops_Aten_PolygammaModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_PolygammaModule()
 
-n = torch.tensor(0)  # Fallback for unknown type |int
+n = None  # Fallback for unknown type |int
 x = torch.randn(3)
 
 args = (n, x,)

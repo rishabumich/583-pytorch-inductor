@@ -8,13 +8,13 @@ class Torch_Ops_Aten_TriuIndicesModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_TriuIndicesModule()
 
-row = torch.tensor(0)  # Fallback for unknown type |int
+row = None  # Fallback for unknown type |int
 col = 3
 offset = 3
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (row, col, offset, dtype, layout, device, pin_memory,)
 

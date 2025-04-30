@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Renorm_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Renorm_OutModule()
 
 x = torch.randn(3)
-p = torch.tensor(0)  # Fallback for unknown type Scalar
+p = 1
 dim = 3
-maxnorm = torch.tensor(0)  # Fallback for unknown type Scalar
+maxnorm = 1
 out = torch.empty(3)
 
 args = (x, p, dim, maxnorm, out,)

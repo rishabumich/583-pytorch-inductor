@@ -9,13 +9,13 @@ class Torch_Ops_Aten_RandintLike_LowDtypeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RandintLike_LowDtypeModule()
 
 x = torch.randn(3)
-low = torch.tensor(0)  # Fallback for unknown type SymInt
-high = torch.tensor(0)  # Fallback for unknown type SymInt
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+low = None  # Fallback for unknown type SymInt
+high = None  # Fallback for unknown type SymInt
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, low, high, dtype, layout, device, pin_memory, memory_format,)
 

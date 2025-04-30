@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Exponential_OutModule()
 
 x = torch.randn(3)
 lambd = 1.0
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 out = torch.empty(3)
 
 args = (x, lambd, generator, out,)

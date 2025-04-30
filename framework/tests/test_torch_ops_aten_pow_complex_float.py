@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Pow_ComplexFloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Pow_ComplexFloatModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |complex
+a = None  # Fallback for unknown type |complex
 b = 1.0
 
 args = (a, b,)

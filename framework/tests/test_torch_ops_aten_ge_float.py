@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Ge_FloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Ge_FloatModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |float
+a = None  # Fallback for unknown type |float
 b = 1.0
 
 args = (a, b,)

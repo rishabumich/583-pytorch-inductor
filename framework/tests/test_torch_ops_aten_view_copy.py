@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ViewCopyModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ViewCopyModule()
 
 x = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
+size = torch.sym_int(3)
 
 args = (x, size,)
 

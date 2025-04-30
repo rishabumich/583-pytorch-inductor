@@ -8,11 +8,11 @@ class Torch_Ops_Aten_ScalarTensorModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_ScalarTensorModule()
 
-s = torch.tensor(0)  # Fallback for unknown type |Scalar
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+s = None  # Fallback for unknown type |Scalar
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (s, dtype, layout, device, pin_memory,)
 

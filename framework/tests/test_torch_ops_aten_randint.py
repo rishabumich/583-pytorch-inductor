@@ -8,12 +8,12 @@ class Torch_Ops_Aten_RandintModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_RandintModule()
 
-high = torch.tensor(0)  # Fallback for unknown type |SymInt
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+high = None  # Fallback for unknown type |SymInt
+size = torch.sym_int(3)
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (high, size, dtype, layout, device, pin_memory,)
 

@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_NativeDropoutModule()
 
 input = torch.randn(3)
 p = 1.0
-train = torch.tensor(0)  # Fallback for unknown type bool?
+train = True
 
 args = (input, p, train,)
 

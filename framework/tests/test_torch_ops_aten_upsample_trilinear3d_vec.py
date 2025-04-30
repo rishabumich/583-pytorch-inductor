@@ -9,9 +9,9 @@ class Torch_Ops_Aten_UpsampleTrilinear3D_VecModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UpsampleTrilinear3D_VecModule()
 
 input = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[]?
+output_size = torch.sym_int(3)
 align_corners = True
-scale_factors = torch.tensor(0)  # Fallback for unknown type float[]?
+scale_factors = 1.0
 
 args = (input, output_size, align_corners, scale_factors,)
 

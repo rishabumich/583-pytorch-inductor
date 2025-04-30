@@ -11,8 +11,8 @@ mod = Torch_Ops_Aten_Addr_OutModule()
 x = torch.randn(3)
 vec1 = torch.randn(3)
 vec2 = torch.randn(3)
-beta = torch.tensor(0)  # Fallback for unknown type Scalar
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+beta = 1
+alpha = 1
 out = torch.empty(3)
 
 args = (x, vec1, vec2, beta, alpha, out,)

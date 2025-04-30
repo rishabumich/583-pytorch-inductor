@@ -9,7 +9,7 @@ class Torch_Ops_Aten_AdaptiveMaxPool3DModule(torch.nn.Module):
 mod = Torch_Ops_Aten_AdaptiveMaxPool3DModule()
 
 x = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type int[3]
+output_size = 3
 
 args = (x, output_size,)
 

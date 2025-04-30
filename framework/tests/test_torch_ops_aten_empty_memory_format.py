@@ -8,12 +8,12 @@ class Torch_Ops_Aten_Empty_MemoryFormatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Empty_MemoryFormatModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+size = torch.sym_int(3)
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (size, dtype, layout, device, pin_memory, memory_format,)
 

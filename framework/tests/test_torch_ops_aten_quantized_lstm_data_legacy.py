@@ -17,7 +17,7 @@ num_layers = 3
 dropout = 1.0
 train = True
 bidirectional = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 use_dynamic = True
 
 args = (data, batch_sizes, hx, params, has_biases, num_layers, dropout, train, bidirectional, dtype, use_dynamic,)

@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Randint_GeneratorOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randint_GeneratorOutModule()
 
-high = torch.tensor(0)  # Fallback for unknown type |SymInt
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+high = None  # Fallback for unknown type |SymInt
+size = torch.sym_int(3)
+generator = None  # Fallback for unknown type Generator?
 out = torch.empty(3)
 
 args = (high, size, generator, out,)

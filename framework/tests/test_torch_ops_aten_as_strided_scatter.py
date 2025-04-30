@@ -10,9 +10,9 @@ mod = Torch_Ops_Aten_AsStridedScatterModule()
 
 x = torch.randn(3)
 src = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-stride = torch.tensor(0)  # Fallback for unknown type SymInt[]
-storage_offset = torch.tensor(0)  # Fallback for unknown type SymInt?
+size = torch.sym_int(3)
+stride = torch.sym_int(3)
+storage_offset = torch.sym_int(3)
 
 args = (x, src, size, stride, storage_offset,)
 

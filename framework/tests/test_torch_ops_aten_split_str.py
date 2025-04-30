@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Split_StrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Split_StrModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |str
-separator = torch.tensor(0)  # Fallback for unknown type str?
+x = None  # Fallback for unknown type |str
+separator = None  # Fallback for unknown type str?
 max = 3
 
 args = (x, separator, max,)

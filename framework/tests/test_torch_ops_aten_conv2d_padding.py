@@ -11,10 +11,10 @@ mod = Torch_Ops_Aten_Conv2D_PaddingModule()
 input = torch.randn(3)
 weight = torch.randn(3)
 bias = torch.randn(3)
-stride = torch.tensor(0)  # Fallback for unknown type SymInt[2]
-padding = torch.tensor(0)  # Fallback for unknown type str
-dilation = torch.tensor(0)  # Fallback for unknown type SymInt[2]
-groups = torch.tensor(0)  # Fallback for unknown type SymInt
+stride = torch.sym_int(3)
+padding = None  # Fallback for unknown type str
+dilation = torch.sym_int(3)
+groups = None  # Fallback for unknown type SymInt
 
 args = (input, weight, bias, stride, padding, dilation, groups,)
 

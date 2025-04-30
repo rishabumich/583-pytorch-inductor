@@ -9,7 +9,7 @@ class Torch_Ops_Aten_IsStridesLikeFormatModule(torch.nn.Module):
 mod = Torch_Ops_Aten_IsStridesLikeFormatModule()
 
 x = torch.randn(3)
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat
+memory_format = None  # Fallback for unknown type MemoryFormat
 
 args = (x, memory_format,)
 

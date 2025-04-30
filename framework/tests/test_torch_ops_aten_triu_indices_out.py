@@ -8,7 +8,7 @@ class Torch_Ops_Aten_TriuIndices_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_TriuIndices_OutModule()
 
-row = torch.tensor(0)  # Fallback for unknown type |int
+row = None  # Fallback for unknown type |int
 col = 3
 offset = 3
 out = torch.empty(3)

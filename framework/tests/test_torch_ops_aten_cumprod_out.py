@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Cumprod_OutModule()
 
 x = torch.randn(3)
 dim = 3
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 out = torch.empty(3)
 
 args = (x, dim, dtype, out,)

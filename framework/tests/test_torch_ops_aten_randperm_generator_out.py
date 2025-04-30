@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Randperm_GeneratorOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randperm_GeneratorOutModule()
 
-n = torch.tensor(0)  # Fallback for unknown type |SymInt
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+n = None  # Fallback for unknown type |SymInt
+generator = None  # Fallback for unknown type Generator?
 out = torch.empty(3)
 
 args = (n, generator, out,)

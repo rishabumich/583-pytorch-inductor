@@ -11,9 +11,9 @@ mod = Torch_Ops_Aten_NativeGroupNormModule()
 input = torch.randn(3)
 weight = torch.randn(3)
 bias = torch.randn(3)
-N = torch.tensor(0)  # Fallback for unknown type SymInt
-C = torch.tensor(0)  # Fallback for unknown type SymInt
-HxW = torch.tensor(0)  # Fallback for unknown type SymInt
+N = None  # Fallback for unknown type SymInt
+C = None  # Fallback for unknown type SymInt
+HxW = None  # Fallback for unknown type SymInt
 group = 3
 eps = 1.0
 

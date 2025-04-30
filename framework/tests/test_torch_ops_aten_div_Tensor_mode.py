@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Div_TensorModeModule()
 
 x = torch.randn(3)
 other = torch.randn(3)
-rounding_mode = torch.tensor(0)  # Fallback for unknown type str?
+rounding_mode = None  # Fallback for unknown type str?
 
 args = (x, other, rounding_mode,)
 

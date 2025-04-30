@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_GeluBackward_GradInputModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-approximate = torch.tensor(0)  # Fallback for unknown type str
+approximate = None  # Fallback for unknown type str
 grad_input = torch.randn(3)
 
 args = (grad_output, x, approximate, grad_input,)

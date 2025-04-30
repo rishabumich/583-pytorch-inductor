@@ -8,9 +8,9 @@ class Torch_Ops_Aten_SymConstrainRangeForSizeModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_SymConstrainRangeForSizeModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |Scalar
-min = torch.tensor(0)  # Fallback for unknown type int?
-max = torch.tensor(0)  # Fallback for unknown type int?
+size = None  # Fallback for unknown type |Scalar
+min = 3
+max = 3
 
 args = (size, min, max,)
 

@@ -12,7 +12,7 @@ x = torch.randn(3)
 dim = 3
 index = torch.randn(3)
 src = torch.randn(3)
-reduce = torch.tensor(0)  # Fallback for unknown type str
+reduce = None  # Fallback for unknown type str
 include_self = True
 out = torch.empty(3)
 

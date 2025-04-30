@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Mean_NamesOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Mean_NamesOutModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str[1]
+dim = None  # Fallback for unknown type str[1]
 keepdim = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 out = torch.empty(3)
 
 args = (x, dim, keepdim, dtype, out,)

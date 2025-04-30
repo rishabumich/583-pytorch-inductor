@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ReflectionPad3D_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ReflectionPad3D_OutModule()
 
 x = torch.randn(3)
-padding = torch.tensor(0)  # Fallback for unknown type SymInt[6]
+padding = torch.sym_int(3)
 out = torch.empty(3)
 
 args = (x, padding, out,)

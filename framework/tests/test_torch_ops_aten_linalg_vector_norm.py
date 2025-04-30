@@ -9,10 +9,10 @@ class Torch_Ops_Aten_LinalgVectorNormModule(torch.nn.Module):
 mod = Torch_Ops_Aten_LinalgVectorNormModule()
 
 x = torch.randn(3)
-ord = torch.tensor(0)  # Fallback for unknown type Scalar
-dim = torch.tensor(0)  # Fallback for unknown type int[1]?
+ord = 1
+dim = 3
 keepdim = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 
 args = (x, ord, dim, keepdim, dtype,)
 

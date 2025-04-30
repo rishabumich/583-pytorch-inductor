@@ -9,10 +9,10 @@ class Torch_Ops_Aten_Searchsorted_ScalarOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Searchsorted_ScalarOutModule()
 
 sorted_sequence = torch.randn(3)
-x = torch.tensor(0)  # Fallback for unknown type Scalar
+x = 1
 out_int32 = True
 right = True
-side = torch.tensor(0)  # Fallback for unknown type str?
+side = None  # Fallback for unknown type str?
 sorter = torch.randn(3)
 out = torch.empty(3)
 

@@ -9,9 +9,9 @@ class Torch_Ops_Aten_RepeatInterleave_SelfIntModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RepeatInterleave_SelfIntModule()
 
 x = torch.randn(3)
-repeats = torch.tensor(0)  # Fallback for unknown type SymInt
-dim = torch.tensor(0)  # Fallback for unknown type int?
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt?
+repeats = None  # Fallback for unknown type SymInt
+dim = 3
+output_size = torch.sym_int(3)
 
 args = (x, repeats, dim, output_size,)
 

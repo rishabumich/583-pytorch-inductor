@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Threshold_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Threshold_OutModule()
 
 x = torch.randn(3)
-threshold = torch.tensor(0)  # Fallback for unknown type Scalar
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+threshold = 1
+value = 1
 out = torch.empty(3)
 
 args = (x, threshold, value, out,)

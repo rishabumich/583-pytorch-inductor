@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Le_IntFloatModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Le_IntFloatModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |int
+a = None  # Fallback for unknown type |int
 b = 1.0
 
 args = (a, b,)

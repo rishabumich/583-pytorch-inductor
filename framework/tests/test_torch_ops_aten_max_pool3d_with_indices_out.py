@@ -9,10 +9,10 @@ class Torch_Ops_Aten_MaxPool3DWithIndices_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_MaxPool3DWithIndices_OutModule()
 
 x = torch.randn(3)
-kernel_size = torch.tensor(0)  # Fallback for unknown type int[3]
-stride = torch.tensor(0)  # Fallback for unknown type int[3]
-padding = torch.tensor(0)  # Fallback for unknown type int[3]
-dilation = torch.tensor(0)  # Fallback for unknown type int[3]
+kernel_size = 3
+stride = 3
+padding = 3
+dilation = 3
 ceil_mode = True
 out = torch.empty(3)
 indices = torch.randn(3)

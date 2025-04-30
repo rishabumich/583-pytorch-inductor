@@ -9,9 +9,9 @@ class Torch_Ops_Aten_NanToNum_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_NanToNum_OutModule()
 
 x = torch.randn(3)
-nan = torch.tensor(0)  # Fallback for unknown type float?
-posinf = torch.tensor(0)  # Fallback for unknown type float?
-neginf = torch.tensor(0)  # Fallback for unknown type float?
+nan = 1.0
+posinf = 1.0
+neginf = 1.0
 out = torch.empty(3)
 
 args = (x, nan, posinf, neginf, out,)

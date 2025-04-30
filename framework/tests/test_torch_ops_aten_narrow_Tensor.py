@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_Narrow_TensorModule()
 x = torch.randn(3)
 dim = 3
 start = torch.randn(3)
-length = torch.tensor(0)  # Fallback for unknown type SymInt
+length = None  # Fallback for unknown type SymInt
 
 args = (x, dim, start, length,)
 

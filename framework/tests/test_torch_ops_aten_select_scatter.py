@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_SelectScatterModule()
 x = torch.randn(3)
 src = torch.randn(3)
 dim = 3
-index = torch.tensor(0)  # Fallback for unknown type SymInt
+index = None  # Fallback for unknown type SymInt
 
 args = (x, src, dim, index,)
 

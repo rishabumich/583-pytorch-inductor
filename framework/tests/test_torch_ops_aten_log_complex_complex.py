@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Log_ComplexComplexModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Log_ComplexComplexModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |complex
+a = None  # Fallback for unknown type |complex
 b = complex(1.0, 2.0)
 
 args = (a, b,)

@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Linspace_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Linspace_OutModule()
 
-start = torch.tensor(0)  # Fallback for unknown type |Scalar
-end = torch.tensor(0)  # Fallback for unknown type Scalar
+start = None  # Fallback for unknown type |Scalar
+end = 1
 steps = 3
 out = torch.empty(3)
 

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_SpecialChebyshevPolynomialT_NScalarModule(torch.nn.Module):
 mod = Torch_Ops_Aten_SpecialChebyshevPolynomialT_NScalarModule()
 
 x = torch.randn(3)
-n = torch.tensor(0)  # Fallback for unknown type Scalar
+n = 1
 
 args = (x, n,)
 

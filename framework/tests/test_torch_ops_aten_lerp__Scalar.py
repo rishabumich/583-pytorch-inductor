@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Lerp_ScalarModule()
 
 x = torch.randn(3)
 end = torch.randn(3)
-weight = torch.tensor(0)  # Fallback for unknown type Scalar
+weight = 1
 
 args = (x, end, weight,)
 

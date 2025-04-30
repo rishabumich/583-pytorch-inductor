@@ -12,7 +12,7 @@ x = torch.randn(3)
 dim = 3
 index = torch.randn(3)
 source = torch.randn(3)
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+alpha = 1
 out = torch.empty(3)
 
 args = (x, dim, index, source, alpha, out,)

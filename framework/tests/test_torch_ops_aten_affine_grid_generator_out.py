@@ -9,7 +9,7 @@ class Torch_Ops_Aten_AffineGridGenerator_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_AffineGridGenerator_OutModule()
 
 theta = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
+size = torch.sym_int(3)
 align_corners = True
 out = torch.empty(3)
 

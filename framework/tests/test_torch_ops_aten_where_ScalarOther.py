@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Where_ScalarotherModule()
 
 condition = torch.randn(3)
 x = torch.randn(3)
-other = torch.tensor(0)  # Fallback for unknown type Scalar
+other = 1
 
 args = (condition, x, other,)
 

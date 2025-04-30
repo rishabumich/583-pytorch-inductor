@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Ge_ScalarModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Ge_ScalarModule()
 
 x = torch.randn(3)
-other = torch.tensor(0)  # Fallback for unknown type Scalar
+other = 1
 
 args = (x, other,)
 

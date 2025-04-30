@@ -9,8 +9,8 @@ class Torch_Ops_Aten_RollModule(torch.nn.Module):
 mod = Torch_Ops_Aten_RollModule()
 
 x = torch.randn(3)
-shifts = torch.tensor(0)  # Fallback for unknown type SymInt[1]
-dims = torch.tensor(0)  # Fallback for unknown type int[1]
+shifts = torch.sym_int(3)
+dims = 3
 
 args = (x, shifts, dims,)
 

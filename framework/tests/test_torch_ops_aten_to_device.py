@@ -9,11 +9,11 @@ class Torch_Ops_Aten_To_DeviceModule(torch.nn.Module):
 mod = Torch_Ops_Aten_To_DeviceModule()
 
 x = torch.randn(3)
-device = torch.tensor(0)  # Fallback for unknown type Device
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType
+device = None  # Fallback for unknown type Device
+dtype = None  # Fallback for unknown type ScalarType
 non_blocking = True
 copy = True
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, device, dtype, non_blocking, copy, memory_format,)
 

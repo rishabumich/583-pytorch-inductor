@@ -8,14 +8,14 @@ class Torch_Ops_Aten_Randint_LowGeneratorModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randint_LowGeneratorModule()
 
-low = torch.tensor(0)  # Fallback for unknown type |SymInt
-high = torch.tensor(0)  # Fallback for unknown type SymInt
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+low = None  # Fallback for unknown type |SymInt
+high = None  # Fallback for unknown type SymInt
+size = torch.sym_int(3)
+generator = None  # Fallback for unknown type Generator?
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (low, high, size, generator, dtype, layout, device, pin_memory,)
 

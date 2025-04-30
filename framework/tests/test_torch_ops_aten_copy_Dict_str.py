@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Copy_DictStrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Copy_DictStrModule()
 
-t = torch.tensor(0)  # Fallback for unknown type |Dict(str
+t = None  # Fallback for unknown type |Dict(str
 
 args = (t,)
 

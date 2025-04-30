@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Eye_MOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eye_MOutModule()
 
-n = torch.tensor(0)  # Fallback for unknown type |SymInt
-m = torch.tensor(0)  # Fallback for unknown type SymInt
+n = None  # Fallback for unknown type |SymInt
+m = None  # Fallback for unknown type SymInt
 out = torch.empty(3)
 
 args = (n, m, out,)

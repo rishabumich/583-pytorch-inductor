@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_PadSequenceModule()
 sequences = torch.randn(3)
 batch_first = True
 padding_value = 1.0
-padding_side = torch.tensor(0)  # Fallback for unknown type str
+padding_side = None  # Fallback for unknown type str
 
 args = (sequences, batch_first, padding_value, padding_side,)
 

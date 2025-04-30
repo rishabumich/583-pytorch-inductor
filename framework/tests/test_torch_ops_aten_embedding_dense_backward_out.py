@@ -10,8 +10,8 @@ mod = Torch_Ops_Aten_EmbeddingDenseBackward_OutModule()
 
 grad_output = torch.randn(3)
 indices = torch.randn(3)
-num_weights = torch.tensor(0)  # Fallback for unknown type SymInt
-padding_idx = torch.tensor(0)  # Fallback for unknown type SymInt
+num_weights = None  # Fallback for unknown type SymInt
+padding_idx = None  # Fallback for unknown type SymInt
 scale_grad_by_freq = True
 out = torch.empty(3)
 

@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_ResizeAsModule()
 
 x = torch.randn(3)
 the_template = torch.randn(3)
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, the_template, memory_format,)
 

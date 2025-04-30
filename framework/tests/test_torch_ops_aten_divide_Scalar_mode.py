@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Divide_ScalarModeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Divide_ScalarModeModule()
 
 x = torch.randn(3)
-other = torch.tensor(0)  # Fallback for unknown type Scalar
-rounding_mode = torch.tensor(0)  # Fallback for unknown type str?
+other = 1
+rounding_mode = None  # Fallback for unknown type str?
 
 args = (x, other, rounding_mode,)
 

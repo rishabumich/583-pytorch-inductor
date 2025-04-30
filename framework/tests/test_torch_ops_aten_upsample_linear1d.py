@@ -9,9 +9,9 @@ class Torch_Ops_Aten_UpsampleLinear1DModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UpsampleLinear1DModule()
 
 x = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[1]
+output_size = torch.sym_int(3)
 align_corners = True
-scales = torch.tensor(0)  # Fallback for unknown type float?
+scales = 1.0
 
 args = (x, output_size, align_corners, scales,)
 

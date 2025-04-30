@@ -10,12 +10,12 @@ mod = Torch_Ops_Aten_AvgPool3DBackward_GradInputModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-kernel_size = torch.tensor(0)  # Fallback for unknown type int[3]
-stride = torch.tensor(0)  # Fallback for unknown type int[3]
-padding = torch.tensor(0)  # Fallback for unknown type int[3]
+kernel_size = 3
+stride = 3
+padding = 3
 ceil_mode = True
 count_include_pad = True
-divisor_override = torch.tensor(0)  # Fallback for unknown type int?
+divisor_override = 3
 grad_input = torch.randn(3)
 
 args = (grad_output, x, kernel_size, stride, padding, ceil_mode, count_include_pad, divisor_override, grad_input,)

@@ -9,8 +9,8 @@ class Torch_Ops_Aten_UpsampleNearest2D_VecModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UpsampleNearest2D_VecModule()
 
 input = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[]?
-scale_factors = torch.tensor(0)  # Fallback for unknown type float[]?
+output_size = torch.sym_int(3)
+scale_factors = 1.0
 
 args = (input, output_size, scale_factors,)
 

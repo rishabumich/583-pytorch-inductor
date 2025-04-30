@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Arange_StartOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Arange_StartOutModule()
 
-start = torch.tensor(0)  # Fallback for unknown type |Scalar
-end = torch.tensor(0)  # Fallback for unknown type Scalar
-step = torch.tensor(0)  # Fallback for unknown type Scalar
+start = None  # Fallback for unknown type |Scalar
+end = 1
+step = 1
 out = torch.empty(3)
 
 args = (start, end, step, out,)

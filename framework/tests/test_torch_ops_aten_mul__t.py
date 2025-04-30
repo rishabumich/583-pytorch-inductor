@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Mul_TModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Mul_TModule()
 
-l = torch.tensor(0)  # Fallback for unknown type |t[](a!)
+l = None  # Fallback for unknown type |t[](a!)
 n = 3
 
 args = (l, n,)

@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Logspace_ScalarTensorOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Logspace_ScalarTensorOutModule()
 
-start = torch.tensor(0)  # Fallback for unknown type |Scalar
+start = None  # Fallback for unknown type |Scalar
 end = torch.randn(3)
 steps = 3
 base = 1.0

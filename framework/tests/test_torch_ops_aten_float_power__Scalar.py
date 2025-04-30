@@ -9,7 +9,7 @@ class Torch_Ops_Aten_FloatPower_ScalarModule(torch.nn.Module):
 mod = Torch_Ops_Aten_FloatPower_ScalarModule()
 
 x = torch.randn(3)
-exponent = torch.tensor(0)  # Fallback for unknown type Scalar
+exponent = 1
 
 args = (x, exponent,)
 

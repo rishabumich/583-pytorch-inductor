@@ -8,8 +8,8 @@ class Torch_Ops_Aten_LtModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_LtModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |Scalar
-b = torch.tensor(0)  # Fallback for unknown type Scalar
+a = None  # Fallback for unknown type |Scalar
+b = 1
 
 args = (a, b,)
 

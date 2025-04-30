@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Set_SourceStorageModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Set_SourceStorageModule()
 
 x = torch.randn(3)
-source = torch.tensor(0)  # Fallback for unknown type Storage
+source = None  # Fallback for unknown type Storage
 
 args = (x, source,)
 

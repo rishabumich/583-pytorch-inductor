@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Max_NamesDimMaxModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Max_NamesDimMaxModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 keepdim = True
 max = torch.randn(3)
 max_values = torch.randn(3)

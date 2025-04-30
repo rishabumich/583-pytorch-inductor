@@ -9,8 +9,8 @@ class Torch_Ops_Aten_FractionalMaxPool2D_OutputModule(torch.nn.Module):
 mod = Torch_Ops_Aten_FractionalMaxPool2D_OutputModule()
 
 x = torch.randn(3)
-kernel_size = torch.tensor(0)  # Fallback for unknown type int[2]
-output_size = torch.tensor(0)  # Fallback for unknown type int[2]
+kernel_size = 3
+output_size = 3
 random_samples = torch.randn(3)
 output = torch.randn(3)
 indices = torch.randn(3)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_IndexSelect_DimnameModule(torch.nn.Module):
 mod = Torch_Ops_Aten_IndexSelect_DimnameModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 index = torch.randn(3)
 
 args = (x, dim, index,)

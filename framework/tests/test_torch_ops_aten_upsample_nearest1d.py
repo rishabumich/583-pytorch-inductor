@@ -9,8 +9,8 @@ class Torch_Ops_Aten_UpsampleNearest1DModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UpsampleNearest1DModule()
 
 x = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[1]
-scales = torch.tensor(0)  # Fallback for unknown type float?
+output_size = torch.sym_int(3)
+scales = 1.0
 
 args = (x, output_size, scales,)
 

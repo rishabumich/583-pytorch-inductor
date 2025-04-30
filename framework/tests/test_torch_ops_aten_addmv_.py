@@ -11,8 +11,8 @@ mod = Torch_Ops_Aten_AddmvModule()
 x = torch.randn(3)
 mat = torch.randn(3)
 vec = torch.randn(3)
-beta = torch.tensor(0)  # Fallback for unknown type Scalar
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+beta = 1
+alpha = 1
 
 args = (x, mat, vec, beta, alpha,)
 

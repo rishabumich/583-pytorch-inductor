@@ -9,11 +9,11 @@ class Torch_Ops_Aten_SliceBackwardModule(torch.nn.Module):
 mod = Torch_Ops_Aten_SliceBackwardModule()
 
 grad_output = torch.randn(3)
-input_sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+input_sizes = torch.sym_int(3)
 dim = 3
-start = torch.tensor(0)  # Fallback for unknown type SymInt
-end = torch.tensor(0)  # Fallback for unknown type SymInt
-step = torch.tensor(0)  # Fallback for unknown type SymInt
+start = None  # Fallback for unknown type SymInt
+end = None  # Fallback for unknown type SymInt
+step = None  # Fallback for unknown type SymInt
 
 args = (grad_output, input_sizes, dim, start, end, step,)
 

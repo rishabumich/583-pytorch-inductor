@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Xlogy_ScalarSelfModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Xlogy_ScalarSelfModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |Scalar
+x = None  # Fallback for unknown type |Scalar
 other = torch.randn(3)
 
 args = (x, other,)

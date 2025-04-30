@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_MaskedScatterBackwardModule()
 
 grad_output = torch.randn(3)
 mask = torch.randn(3)
-sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+sizes = torch.sym_int(3)
 
 args = (grad_output, mask, sizes,)
 

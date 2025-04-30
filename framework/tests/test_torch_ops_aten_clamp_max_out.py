@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ClampMax_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ClampMax_OutModule()
 
 x = torch.randn(3)
-max = torch.tensor(0)  # Fallback for unknown type Scalar
+max = 1
 out = torch.empty(3)
 
 args = (x, max, out,)

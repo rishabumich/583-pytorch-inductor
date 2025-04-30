@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Normal_FloatTensorModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Normal_FloatTensorModule()
 
-mean = torch.tensor(0)  # Fallback for unknown type |float
+mean = None  # Fallback for unknown type |float
 std = torch.randn(3)
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 
 args = (mean, std, generator,)
 

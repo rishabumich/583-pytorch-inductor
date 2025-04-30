@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Randn_GeneratorWithNamesOutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randn_GeneratorWithNamesOutModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
-names = torch.tensor(0)  # Fallback for unknown type str[]?
+size = torch.sym_int(3)
+generator = None  # Fallback for unknown type Generator?
+names = None  # Fallback for unknown type str[]?
 out = torch.empty(3)
 
 args = (size, generator, names, out,)

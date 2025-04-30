@@ -10,12 +10,12 @@ mod = Torch_Ops_Aten_NativeLayerNormBackward_OutModule()
 
 grad_out = torch.randn(3)
 input = torch.randn(3)
-normalized_shape = torch.tensor(0)  # Fallback for unknown type SymInt[]
+normalized_shape = torch.sym_int(3)
 mean = torch.randn(3)
 rstd = torch.randn(3)
 weight = torch.randn(3)
 bias = torch.randn(3)
-output_mask = torch.tensor(0)  # Fallback for unknown type bool[3]
+output_mask = True
 out0 = torch.randn(3)
 out1 = torch.randn(3)
 out2 = torch.randn(3)

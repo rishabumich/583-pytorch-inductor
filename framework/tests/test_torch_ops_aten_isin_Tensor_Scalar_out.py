@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Isin_TensorScalarOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Isin_TensorScalarOutModule()
 
 elements = torch.randn(3)
-test_element = torch.tensor(0)  # Fallback for unknown type Scalar
+test_element = 1
 assume_unique = True
 invert = True
 out = torch.empty(3)

@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Kthvalue_DimnameModule()
 
 x = torch.randn(3)
 k = 3
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 keepdim = True
 
 args = (x, k, dim, keepdim,)

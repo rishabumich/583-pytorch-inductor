@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Transpose_DimnameModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Transpose_DimnameModule()
 
 x = torch.randn(3)
-dim0 = torch.tensor(0)  # Fallback for unknown type str
-dim1 = torch.tensor(0)  # Fallback for unknown type str
+dim0 = None  # Fallback for unknown type str
+dim1 = None  # Fallback for unknown type str
 
 args = (x, dim0, dim1,)
 

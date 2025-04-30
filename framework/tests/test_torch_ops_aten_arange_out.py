@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Arange_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Arange_OutModule()
 
-end = torch.tensor(0)  # Fallback for unknown type |Scalar
+end = None  # Fallback for unknown type |Scalar
 out = torch.empty(3)
 
 args = (end, out,)

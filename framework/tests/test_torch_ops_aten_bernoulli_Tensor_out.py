@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_Bernoulli_TensorOutModule()
 
 x = torch.randn(3)
 p = torch.randn(3)
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 out = torch.empty(3)
 
 args = (x, p, generator, out,)

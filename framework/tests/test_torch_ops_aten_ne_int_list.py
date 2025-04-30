@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Ne_IntListModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Ne_IntListModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |int[]
-b = torch.tensor(0)  # Fallback for unknown type int[]
+a = 3
+b = 3
 
 args = (a, b,)
 

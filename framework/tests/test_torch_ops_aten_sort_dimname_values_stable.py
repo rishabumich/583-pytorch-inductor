@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Sort_DimnameValuesStableModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Sort_DimnameValuesStableModule()
 
 x = torch.randn(3)
-stable = torch.tensor(0)  # Fallback for unknown type bool?
-dim = torch.tensor(0)  # Fallback for unknown type str
+stable = True
+dim = None  # Fallback for unknown type str
 descending = True
 values = torch.randn(3)
 indices = torch.randn(3)

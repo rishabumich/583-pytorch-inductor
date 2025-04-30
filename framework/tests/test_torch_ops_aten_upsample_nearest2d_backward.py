@@ -9,10 +9,10 @@ class Torch_Ops_Aten_UpsampleNearest2DBackwardModule(torch.nn.Module):
 mod = Torch_Ops_Aten_UpsampleNearest2DBackwardModule()
 
 grad_output = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[2]
-input_size = torch.tensor(0)  # Fallback for unknown type SymInt[4]
-scales_h = torch.tensor(0)  # Fallback for unknown type float?
-scales_w = torch.tensor(0)  # Fallback for unknown type float?
+output_size = torch.sym_int(3)
+input_size = torch.sym_int(3)
+scales_h = 1.0
+scales_w = 1.0
 
 args = (grad_output, output_size, input_size, scales_h, scales_w,)
 

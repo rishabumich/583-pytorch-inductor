@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Where_ScalarselfModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Where_ScalarselfModule()
 
 condition = torch.randn(3)
-x = torch.tensor(0)  # Fallback for unknown type Scalar
+x = 1
 other = torch.randn(3)
 
 args = (condition, x, other,)

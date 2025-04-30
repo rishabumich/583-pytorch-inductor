@@ -12,7 +12,7 @@ x = torch.randn(3)
 other = torch.randn(3)
 non_blocking = True
 copy = True
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, other, non_blocking, copy, memory_format,)
 

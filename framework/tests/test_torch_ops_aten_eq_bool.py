@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Eq_BoolModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eq_BoolModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |bool
+a = None  # Fallback for unknown type |bool
 b = True
 
 args = (a, b,)

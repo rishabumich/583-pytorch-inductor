@@ -8,11 +8,11 @@ class Torch_Ops_Aten_ArangeModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_ArangeModule()
 
-end = torch.tensor(0)  # Fallback for unknown type |Scalar
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+end = None  # Fallback for unknown type |Scalar
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (end, dtype, layout, device, pin_memory,)
 

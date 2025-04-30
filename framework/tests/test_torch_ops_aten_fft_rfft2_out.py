@@ -9,9 +9,9 @@ class Torch_Ops_Aten_FftRfft2_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_FftRfft2_OutModule()
 
 x = torch.randn(3)
-s = torch.tensor(0)  # Fallback for unknown type SymInt[1]?
-dim = torch.tensor(0)  # Fallback for unknown type int[1]
-norm = torch.tensor(0)  # Fallback for unknown type str?
+s = torch.sym_int(3)
+dim = 3
+norm = None  # Fallback for unknown type str?
 out = torch.empty(3)
 
 args = (x, s, dim, norm, out,)

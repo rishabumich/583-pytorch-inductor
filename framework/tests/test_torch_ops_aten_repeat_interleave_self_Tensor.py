@@ -10,8 +10,8 @@ mod = Torch_Ops_Aten_RepeatInterleave_SelfTensorModule()
 
 x = torch.randn(3)
 repeats = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type int?
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt?
+dim = 3
+output_size = torch.sym_int(3)
 
 args = (x, repeats, dim, output_size,)
 

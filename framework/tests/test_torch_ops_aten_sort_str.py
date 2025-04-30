@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Sort_StrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Sort_StrModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |str[](a!)
+x = None  # Fallback for unknown type |str[](a!)
 reverse = True
 
 args = (x, reverse,)

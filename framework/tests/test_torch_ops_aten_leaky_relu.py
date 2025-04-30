@@ -9,7 +9,7 @@ class Torch_Ops_Aten_LeakyReluModule(torch.nn.Module):
 mod = Torch_Ops_Aten_LeakyReluModule()
 
 x = torch.randn(3)
-negative_slope = torch.tensor(0)  # Fallback for unknown type Scalar
+negative_slope = 1
 
 args = (x, negative_slope,)
 

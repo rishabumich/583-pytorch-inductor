@@ -10,8 +10,8 @@ mod = Torch_Ops_Aten_NarrowCopy_OutModule()
 
 x = torch.randn(3)
 dim = 3
-start = torch.tensor(0)  # Fallback for unknown type SymInt
-length = torch.tensor(0)  # Fallback for unknown type SymInt
+start = None  # Fallback for unknown type SymInt
+length = None  # Fallback for unknown type SymInt
 out = torch.empty(3)
 
 args = (x, dim, start, length, out,)

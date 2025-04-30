@@ -9,7 +9,7 @@ class Torch_Ops_Aten_To_PrimDtypeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_To_PrimDtypeModule()
 
 x = torch.randn(3)
-dtype = torch.tensor(0)  # Fallback for unknown type int?
+dtype = 3
 non_blocking = True
 copy = True
 

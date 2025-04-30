@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_MaskedFill_ScalarModule()
 
 x = torch.randn(3)
 mask = torch.randn(3)
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+value = 1
 
 args = (x, mask, value,)
 

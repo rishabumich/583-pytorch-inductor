@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Slice_StrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Slice_StrModule()
 
-string = torch.tensor(0)  # Fallback for unknown type |str
-start = torch.tensor(0)  # Fallback for unknown type int?
-end = torch.tensor(0)  # Fallback for unknown type int?
+string = None  # Fallback for unknown type |str
+start = 3
+end = 3
 step = 3
 
 args = (string, start, end, step,)

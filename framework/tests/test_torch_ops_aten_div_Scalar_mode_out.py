@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Div_ScalarModeOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Div_ScalarModeOutModule()
 
 x = torch.randn(3)
-other = torch.tensor(0)  # Fallback for unknown type Scalar
-rounding_mode = torch.tensor(0)  # Fallback for unknown type str?
+other = 1
+rounding_mode = None  # Fallback for unknown type str?
 out = torch.empty(3)
 
 args = (x, other, rounding_mode, out,)

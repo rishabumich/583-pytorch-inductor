@@ -11,12 +11,12 @@ mod = Torch_Ops_Aten_Convolution_OutModule()
 input = torch.randn(3)
 weight = torch.randn(3)
 bias = torch.randn(3)
-stride = torch.tensor(0)  # Fallback for unknown type SymInt[]
-padding = torch.tensor(0)  # Fallback for unknown type SymInt[]
-dilation = torch.tensor(0)  # Fallback for unknown type SymInt[]
+stride = torch.sym_int(3)
+padding = torch.sym_int(3)
+dilation = torch.sym_int(3)
 transposed = True
-output_padding = torch.tensor(0)  # Fallback for unknown type SymInt[]
-groups = torch.tensor(0)  # Fallback for unknown type SymInt
+output_padding = torch.sym_int(3)
+groups = None  # Fallback for unknown type SymInt
 out = torch.empty(3)
 
 args = (input, weight, bias, stride, padding, dilation, transposed, output_padding, groups, out,)

@@ -9,8 +9,8 @@ class Torch_Ops_Aten_NewFull_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_NewFull_OutModule()
 
 x = torch.randn(3)
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
+size = torch.sym_int(3)
+fill_value = 1
 out = torch.empty(3)
 
 args = (x, size, fill_value, out,)

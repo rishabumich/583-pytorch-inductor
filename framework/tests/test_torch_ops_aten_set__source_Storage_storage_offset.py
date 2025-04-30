@@ -9,10 +9,10 @@ class Torch_Ops_Aten_Set_SourceStorageStorageOffsetModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Set_SourceStorageStorageOffsetModule()
 
 x = torch.randn(3)
-source = torch.tensor(0)  # Fallback for unknown type Storage
-storage_offset = torch.tensor(0)  # Fallback for unknown type SymInt
-size = torch.tensor(0)  # Fallback for unknown type SymInt[]
-stride = torch.tensor(0)  # Fallback for unknown type SymInt[]
+source = None  # Fallback for unknown type Storage
+storage_offset = None  # Fallback for unknown type SymInt
+size = torch.sym_int(3)
+stride = torch.sym_int(3)
 
 args = (x, source, storage_offset, size, stride,)
 

@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_LogitBackwardModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-eps = torch.tensor(0)  # Fallback for unknown type float?
+eps = 1.0
 
 args = (grad_output, x, eps,)
 

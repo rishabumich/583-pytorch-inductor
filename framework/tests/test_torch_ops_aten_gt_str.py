@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Gt_StrModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Gt_StrModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |str
-b = torch.tensor(0)  # Fallback for unknown type str
+a = None  # Fallback for unknown type |str
+b = None  # Fallback for unknown type str
 
 args = (a, b,)
 

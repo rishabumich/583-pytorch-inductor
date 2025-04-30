@@ -13,11 +13,11 @@ input = torch.randn(3)
 mean = torch.randn(3)
 rstd = torch.randn(3)
 weight = torch.randn(3)
-N = torch.tensor(0)  # Fallback for unknown type SymInt
-C = torch.tensor(0)  # Fallback for unknown type SymInt
-HxW = torch.tensor(0)  # Fallback for unknown type SymInt
+N = None  # Fallback for unknown type SymInt
+C = None  # Fallback for unknown type SymInt
+HxW = None  # Fallback for unknown type SymInt
 group = 3
-output_mask = torch.tensor(0)  # Fallback for unknown type bool[3]
+output_mask = True
 
 args = (grad_out, input, mean, rstd, weight, N, C, HxW, group, output_mask,)
 

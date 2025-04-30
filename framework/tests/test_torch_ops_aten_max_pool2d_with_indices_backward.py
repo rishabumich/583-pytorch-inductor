@@ -10,10 +10,10 @@ mod = Torch_Ops_Aten_MaxPool2DWithIndicesBackwardModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-kernel_size = torch.tensor(0)  # Fallback for unknown type int[2]
-stride = torch.tensor(0)  # Fallback for unknown type int[2]
-padding = torch.tensor(0)  # Fallback for unknown type int[2]
-dilation = torch.tensor(0)  # Fallback for unknown type int[2]
+kernel_size = 3
+stride = 3
+padding = 3
+dilation = 3
 ceil_mode = True
 indices = torch.randn(3)
 

@@ -9,10 +9,10 @@ class Torch_Ops_Aten_To_DtypeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_To_DtypeModule()
 
 x = torch.randn(3)
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType
+dtype = None  # Fallback for unknown type ScalarType
 non_blocking = True
 copy = True
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+memory_format = None  # Fallback for unknown type MemoryFormat?
 
 args = (x, dtype, non_blocking, copy, memory_format,)
 

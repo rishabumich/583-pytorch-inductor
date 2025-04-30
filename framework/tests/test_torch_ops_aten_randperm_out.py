@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Randperm_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Randperm_OutModule()
 
-n = torch.tensor(0)  # Fallback for unknown type |SymInt
+n = None  # Fallback for unknown type |SymInt
 out = torch.empty(3)
 
 args = (n, out,)

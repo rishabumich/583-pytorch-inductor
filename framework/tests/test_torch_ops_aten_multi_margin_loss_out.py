@@ -10,8 +10,8 @@ mod = Torch_Ops_Aten_MultiMarginLoss_OutModule()
 
 x = torch.randn(3)
 target = torch.randn(3)
-p = torch.tensor(0)  # Fallback for unknown type Scalar
-margin = torch.tensor(0)  # Fallback for unknown type Scalar
+p = 1
+margin = 1
 weight = torch.randn(3)
 reduction = 3
 out = torch.empty(3)

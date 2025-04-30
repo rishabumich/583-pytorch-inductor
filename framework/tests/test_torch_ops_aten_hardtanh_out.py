@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Hardtanh_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Hardtanh_OutModule()
 
 x = torch.randn(3)
-min_val = torch.tensor(0)  # Fallback for unknown type Scalar
-max_val = torch.tensor(0)  # Fallback for unknown type Scalar
+min_val = 1
+max_val = 1
 out = torch.empty(3)
 
 args = (x, min_val, max_val, out,)

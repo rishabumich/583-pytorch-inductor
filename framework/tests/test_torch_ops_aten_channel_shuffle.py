@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ChannelShuffleModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ChannelShuffleModule()
 
 x = torch.randn(3)
-groups = torch.tensor(0)  # Fallback for unknown type SymInt
+groups = None  # Fallback for unknown type SymInt
 
 args = (x, groups,)
 

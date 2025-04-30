@@ -8,7 +8,7 @@ class Torch_Ops_Aten_SpecialShiftedChebyshevPolynomialT_XScalarModule(torch.nn.M
 
 mod = Torch_Ops_Aten_SpecialShiftedChebyshevPolynomialT_XScalarModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |Scalar
+x = None  # Fallback for unknown type |Scalar
 n = torch.randn(3)
 
 args = (x, n,)

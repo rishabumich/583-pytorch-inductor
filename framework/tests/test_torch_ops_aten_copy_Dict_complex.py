@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Copy_DictComplexModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Copy_DictComplexModule()
 
-t = torch.tensor(0)  # Fallback for unknown type |Dict(complex
+t = None  # Fallback for unknown type |Dict(complex
 
 args = (t,)
 

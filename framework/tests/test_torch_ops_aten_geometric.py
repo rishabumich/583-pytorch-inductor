@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_GeometricModule()
 
 x = torch.randn(3)
 p = 1.0
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 
 args = (x, p, generator,)
 

@@ -11,8 +11,8 @@ mod = Torch_Ops_Aten_AddbmmModule()
 x = torch.randn(3)
 batch1 = torch.randn(3)
 batch2 = torch.randn(3)
-beta = torch.tensor(0)  # Fallback for unknown type Scalar
-alpha = torch.tensor(0)  # Fallback for unknown type Scalar
+beta = 1
+alpha = 1
 
 args = (x, batch1, batch2, beta, alpha,)
 

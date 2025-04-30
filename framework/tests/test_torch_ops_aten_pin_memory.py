@@ -9,7 +9,7 @@ class Torch_Ops_Aten_PinMemoryModule(torch.nn.Module):
 mod = Torch_Ops_Aten_PinMemoryModule()
 
 x = torch.randn(3)
-device = torch.tensor(0)  # Fallback for unknown type Device?
+device = None  # Fallback for unknown type Device?
 
 args = (x, device,)
 

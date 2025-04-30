@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Mean_DtypeOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Mean_DtypeOutModule()
 
 x = torch.randn(3)
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 out = torch.empty(3)
 
 args = (x, dtype, out,)

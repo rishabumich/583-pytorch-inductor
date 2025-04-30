@@ -9,7 +9,7 @@ class Torch_Ops_Aten_CountNonzero_DimIntlistOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_CountNonzero_DimIntlistOutModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type int[]
+dim = 3
 out = torch.empty(3)
 
 args = (x, dim, out,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Gelu_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Gelu_OutModule()
 
 x = torch.randn(3)
-approximate = torch.tensor(0)  # Fallback for unknown type str
+approximate = None  # Fallback for unknown type str
 out = torch.empty(3)
 
 args = (x, approximate, out,)

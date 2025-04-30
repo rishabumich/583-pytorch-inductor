@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Logsumexp_NamesModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Logsumexp_NamesModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str[1]
+dim = None  # Fallback for unknown type str[1]
 keepdim = True
 
 args = (x, dim, keepdim,)

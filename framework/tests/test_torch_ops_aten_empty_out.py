@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Empty_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Empty_OutModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+size = torch.sym_int(3)
+memory_format = None  # Fallback for unknown type MemoryFormat?
 out = torch.empty(3)
 
 args = (size, memory_format, out,)

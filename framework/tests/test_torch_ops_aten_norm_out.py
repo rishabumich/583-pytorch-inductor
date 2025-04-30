@@ -9,8 +9,8 @@ class Torch_Ops_Aten_Norm_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Norm_OutModule()
 
 x = torch.randn(3)
-p = torch.tensor(0)  # Fallback for unknown type Scalar?
-dim = torch.tensor(0)  # Fallback for unknown type int[1]
+p = 1
+dim = 3
 keepdim = True
 out = torch.empty(3)
 

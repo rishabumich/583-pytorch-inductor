@@ -8,9 +8,9 @@ class Torch_Ops_Aten_Slice_TModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Slice_TModule()
 
-l = torch.tensor(0)  # Fallback for unknown type |t[]
-start = torch.tensor(0)  # Fallback for unknown type int?
-end = torch.tensor(0)  # Fallback for unknown type int?
+l = None  # Fallback for unknown type |t[]
+start = 3
+end = 3
 step = 3
 
 args = (l, start, end, step,)

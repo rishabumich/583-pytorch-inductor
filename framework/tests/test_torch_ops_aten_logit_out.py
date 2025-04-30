@@ -9,7 +9,7 @@ class Torch_Ops_Aten_Logit_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Logit_OutModule()
 
 x = torch.randn(3)
-eps = torch.tensor(0)  # Fallback for unknown type float?
+eps = 1.0
 out = torch.empty(3)
 
 args = (x, eps, out,)

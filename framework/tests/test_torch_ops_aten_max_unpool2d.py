@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_MaxUnpool2DModule()
 
 x = torch.randn(3)
 indices = torch.randn(3)
-output_size = torch.tensor(0)  # Fallback for unknown type SymInt[2]
+output_size = torch.sym_int(3)
 
 args = (x, indices, output_size,)
 

@@ -8,12 +8,12 @@ class Torch_Ops_Aten_FullModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_FullModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
-layout = torch.tensor(0)  # Fallback for unknown type Layout?
-device = torch.tensor(0)  # Fallback for unknown type Device?
-pin_memory = torch.tensor(0)  # Fallback for unknown type bool?
+size = torch.sym_int(3)
+fill_value = 1
+dtype = None  # Fallback for unknown type ScalarType?
+layout = None  # Fallback for unknown type Layout?
+device = None  # Fallback for unknown type Device?
+pin_memory = True
 
 args = (size, fill_value, dtype, layout, device, pin_memory,)
 

@@ -10,13 +10,13 @@ mod = Torch_Ops_Aten_IstftModule()
 
 x = torch.randn(3)
 n_fft = 3
-hop_length = torch.tensor(0)  # Fallback for unknown type int?
-win_length = torch.tensor(0)  # Fallback for unknown type int?
+hop_length = 3
+win_length = 3
 window = torch.randn(3)
 center = True
 normalized = True
-onesided = torch.tensor(0)  # Fallback for unknown type bool?
-length = torch.tensor(0)  # Fallback for unknown type int?
+onesided = True
+length = 3
 return_complex = True
 
 args = (x, n_fft, hop_length, win_length, window, center, normalized, onesided, length, return_complex,)

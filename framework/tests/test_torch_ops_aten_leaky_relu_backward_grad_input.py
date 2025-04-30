@@ -10,7 +10,7 @@ mod = Torch_Ops_Aten_LeakyReluBackward_GradInputModule()
 
 grad_output = torch.randn(3)
 x = torch.randn(3)
-negative_slope = torch.tensor(0)  # Fallback for unknown type Scalar
+negative_slope = 1
 self_is_result = True
 grad_input = torch.randn(3)
 

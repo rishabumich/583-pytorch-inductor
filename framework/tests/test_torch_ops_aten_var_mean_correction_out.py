@@ -9,8 +9,8 @@ class Torch_Ops_Aten_VarMean_CorrectionOutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_VarMean_CorrectionOutModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type int[1]?
-correction = torch.tensor(0)  # Fallback for unknown type Scalar?
+dim = 3
+correction = 1
 keepdim = True
 out0 = torch.randn(3)
 out1 = torch.randn(3)

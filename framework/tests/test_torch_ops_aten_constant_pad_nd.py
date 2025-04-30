@@ -9,8 +9,8 @@ class Torch_Ops_Aten_ConstantPadNdModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ConstantPadNdModule()
 
 x = torch.randn(3)
-pad = torch.tensor(0)  # Fallback for unknown type SymInt[]
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+pad = torch.sym_int(3)
+value = 1
 
 args = (x, pad, value,)
 

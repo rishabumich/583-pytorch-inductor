@@ -10,10 +10,10 @@ mod = Torch_Ops_Aten_RreluWithNoise_OutModule()
 
 x = torch.randn(3)
 noise = torch.randn(3)
-lower = torch.tensor(0)  # Fallback for unknown type Scalar
-upper = torch.tensor(0)  # Fallback for unknown type Scalar
+lower = 1
+upper = 1
 training = True
-generator = torch.tensor(0)  # Fallback for unknown type Generator?
+generator = None  # Fallback for unknown type Generator?
 out = torch.empty(3)
 
 args = (x, noise, lower, upper, training, generator, out,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ReflectionPad1DModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ReflectionPad1DModule()
 
 x = torch.randn(3)
-padding = torch.tensor(0)  # Fallback for unknown type SymInt[2]
+padding = torch.sym_int(3)
 
 args = (x, padding,)
 

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_DiagonalBackwardModule(torch.nn.Module):
 mod = Torch_Ops_Aten_DiagonalBackwardModule()
 
 grad_output = torch.randn(3)
-input_sizes = torch.tensor(0)  # Fallback for unknown type SymInt[]
+input_sizes = torch.sym_int(3)
 offset = 3
 dim1 = 3
 dim2 = 3

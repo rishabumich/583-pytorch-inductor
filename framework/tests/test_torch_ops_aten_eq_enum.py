@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Eq_EnumModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eq_EnumModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |AnyEnumType
-b = torch.tensor(0)  # Fallback for unknown type AnyEnumType
+a = None  # Fallback for unknown type |AnyEnumType
+b = None  # Fallback for unknown type AnyEnumType
 
 args = (a, b,)
 

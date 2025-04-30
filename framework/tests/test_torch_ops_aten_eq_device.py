@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Eq_DeviceModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Eq_DeviceModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |Device
-b = torch.tensor(0)  # Fallback for unknown type Device
+a = None  # Fallback for unknown type |Device
+b = None  # Fallback for unknown type Device
 
 args = (a, b,)
 

@@ -11,7 +11,7 @@ mod = Torch_Ops_Aten_Prod_DimIntModule()
 x = torch.randn(3)
 dim = 3
 keepdim = True
-dtype = torch.tensor(0)  # Fallback for unknown type ScalarType?
+dtype = None  # Fallback for unknown type ScalarType?
 
 args = (x, dim, keepdim, dtype,)
 

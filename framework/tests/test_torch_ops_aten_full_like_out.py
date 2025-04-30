@@ -9,8 +9,8 @@ class Torch_Ops_Aten_FullLike_OutModule(torch.nn.Module):
 mod = Torch_Ops_Aten_FullLike_OutModule()
 
 x = torch.randn(3)
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
-memory_format = torch.tensor(0)  # Fallback for unknown type MemoryFormat?
+fill_value = 1
+memory_format = None  # Fallback for unknown type MemoryFormat?
 out = torch.empty(3)
 
 args = (x, fill_value, memory_format, out,)

@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ArgminModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ArgminModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type int?
+dim = 3
 keepdim = True
 
 args = (x, dim, keepdim,)

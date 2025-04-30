@@ -8,8 +8,8 @@ class Torch_Ops_Aten_Full_OutModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Full_OutModule()
 
-size = torch.tensor(0)  # Fallback for unknown type |SymInt[]
-fill_value = torch.tensor(0)  # Fallback for unknown type Scalar
+size = torch.sym_int(3)
+fill_value = 1
 out = torch.empty(3)
 
 args = (size, fill_value, out,)

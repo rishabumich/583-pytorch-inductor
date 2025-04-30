@@ -9,7 +9,7 @@ class Torch_Ops_Aten_ReshapeModule(torch.nn.Module):
 mod = Torch_Ops_Aten_ReshapeModule()
 
 x = torch.randn(3)
-shape = torch.tensor(0)  # Fallback for unknown type SymInt[]
+shape = torch.sym_int(3)
 
 args = (x, shape,)
 

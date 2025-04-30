@@ -8,7 +8,7 @@ class Torch_Ops_Aten_SpecialLegendrePolynomialP_XScalarOutModule(torch.nn.Module
 
 mod = Torch_Ops_Aten_SpecialLegendrePolynomialP_XScalarOutModule()
 
-x = torch.tensor(0)  # Fallback for unknown type |Scalar
+x = None  # Fallback for unknown type |Scalar
 n = torch.randn(3)
 out = torch.empty(3)
 

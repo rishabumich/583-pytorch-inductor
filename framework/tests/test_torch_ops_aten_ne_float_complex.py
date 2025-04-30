@@ -8,7 +8,7 @@ class Torch_Ops_Aten_Ne_FloatComplexModule(torch.nn.Module):
 
 mod = Torch_Ops_Aten_Ne_FloatComplexModule()
 
-a = torch.tensor(0)  # Fallback for unknown type |float
+a = None  # Fallback for unknown type |float
 b = complex(1.0, 2.0)
 
 args = (a, b,)

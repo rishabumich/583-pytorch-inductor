@@ -9,9 +9,9 @@ class Torch_Ops_Aten_Scatter_DimnameValueModule(torch.nn.Module):
 mod = Torch_Ops_Aten_Scatter_DimnameValueModule()
 
 x = torch.randn(3)
-dim = torch.tensor(0)  # Fallback for unknown type str
+dim = None  # Fallback for unknown type str
 index = torch.randn(3)
-value = torch.tensor(0)  # Fallback for unknown type Scalar
+value = 1
 
 args = (x, dim, index, value,)
 
